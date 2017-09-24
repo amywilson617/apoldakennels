@@ -7,9 +7,8 @@
 /*------------------------------------*\
     #IMPORTS
 \*------------------------------------*/
-@import "_1_base/base";
-@import "_2_helpers/helpers";
-@import "_3_vendor/vendor";
-@import "_4_redefine/redefine";
-@import "_5_layout/layout";
-@import "_7_pages/pages";
+@import "scss/_1_base/base";
+@import "scss/_2_helpers/helpers";
+@import "scss/_4_redefine/redefine";
+@import "scss/_5_layout/layout";
+@import "scss/_7_pages/pages";
