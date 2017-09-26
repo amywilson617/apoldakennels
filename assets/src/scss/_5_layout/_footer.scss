@@ -1,9 +1,82 @@
 /*------------------------------------*\
     #FOOTER
 \*------------------------------------*/
-.footer {
+footer {
+	background-color: $red;
+	padding: 1%;
 
-	.copyright {
-		
+ul {
+	text-align: center;
+	-webkit-padding-start: 0px;
+
+	> li {
+		@include no-bullets;
+		color: white;
+		text-align: center;
+		font-size: em(12);
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: $mont;
+		display: inline;
+		padding: 2%;
+		margin: auto;
+
+		> a {
+				text-decoration: none;
+				color: white;
+
+			a:visited{
+				color:$darkgray;
+			}
+
+			a:active{
+				color: white;
+			}
+
+			&:hover {
+				color: $darkgray;
+				text-decoration: none;
+			}
+		}
 	}
+}
+}
+
+footer p{
+	color: white;
+	text-align: center;
+	font-size: em(10);
+	font-family: $mont;
+}
+
+.footer-icons{
+	margin: auto;
+}
+
+.foot-f{
+	width: 5%;
+	padding: 3%;
+	margin-left: 33%;
+}
+
+.foot-f:hover{
+	opacity: .5;
+}
+
+.foot-g{
+	width: 5%;
+	padding: 3%;
+}
+
+.foot-g:hover{
+	opacity: .5;
+}
+
+.foot-y{
+	width: 5%;
+	padding: 3%;
+}
+
+.foot-y:hover{
+	opacity: .5;
 }

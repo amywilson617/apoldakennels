@@ -7,15 +7,26 @@
     <link rel="stylesheet" href="/assets/dist/css/main.css" />
   </head>
   <body>
+  <main class="grid-boarding">
+
+    <!-- RESERVATION SNIPPET -->
+            <div class="reservations">
+
+                <p> To make reservations, contact us at <span class="phone">
+                  630.898.2947 </span> or <a href="mailto:apoldakennels@mac.com">
+                    <span class="phone"> email us </span></a> </p>
+
+            </div>
+
 
     <!-- NAV -->
         <nav>
 
-            <img src="assets/src/img/apolda-logo.png" alt="Logo" title="Logo" />
+            <img class="logo" src="assets/src/img/apolda-logo.png" alt="Logo" title="Logo"/>
 
             <ul>
                 <li> <a href="index.html"> home </a> </li>
-                <li> <a href="aboutus.html"> about us </a> </li>
+                <li> <a href="about.html"> about us </a> </li>
                 <li> <a href="services.html"> services </a> </li>
                 <li> <a href="blog.html"> blog </a> </li>
                 <li> <a href="contact.html"> contact </a> </li>
@@ -23,13 +34,6 @@
 
         </nav>
 
-<!-- RESERVATION SNIPPET -->
-        <div class="reservations">
-
-            <p> To make reservations, contact us at <span class="phone">
-              630.898.2947 </span> or <a href="mailto:apoldakennels@mac.com"> email us</a> </p>
-
-        </div>
 
 <!-- RED INFO -->
         <section class="red-info">
@@ -72,24 +76,47 @@
 
           <h3> Rates </h3>
 
-                  <ul class="rates">
+          <table class="rwd-table">
+              <tr>
+                <th> Size of Dog </th>
+                <th> Price </th>
+              </tr>
 
-                      <li> 0 - 50 LBS <span class="price"> | $20 daily </span> </li>
-                      <li> 50 - 80 LBS <span class="price"> | $25 daily </span> </li>
-                      <li> 80 LBS+ <span class="price"> | $30 daily </span> </li>
-                      <li> Daily Walks <span class="price"> | $20 hourly - minimum 10 minute walk time </span> </li>
-                      <li class="nail-trim"> Free nail trim and bath with stays of 7 days or more </li>
+              <tr class="tr1">
+                  <td data-th="Size of Dog"> 0 - 50 LBS </td>
+                  <td data-th="Price"> $20 Daily </td>
+              </tr>
 
-                  </ul>
-                        </section>
+              <tr >
+                  <td data-th="Size of Dog"> 50 - 80 LBS </td>
+                  <td data-th="Price"> $25 Daily </td>
+              </tr>
 
+              <tr class="tr1">
+                  <td data-th="Size of Dog"> 80 LBS + </td>
+                  <td data-th="Price"> $20 Daily </td>
+              </tr>
+
+              <tr>
+                  <td data-th="Size of Dog"> *Daily Walks Add-On </td>
+                  <td data-th="Price"> $20/HR - Minimum 10 minutes </td>
+              </tr>
+          </table>
+
+          <div class="quote">
+              <a href="mailto:apoldakennels@mac.com" class="white-contact"> Get a Quote </a>
+              <a href="mailto:apoldakennels@mac.com"> <img src="assets/src/img/red-arrow.svg" class="red-arrow" alt="arrow" title ="arrow"> </a>
+          </div>
+
+
+    </section>
 
         <!-- FOOTER -->
         <footer>
 
             <ul>
                   <li> <a href="index.html"> home </a> </li>
-                  <li> <a href="aboutus.html"> about us </a> </li>
+                  <li> <a href="about.html"> about us </a> </li>
                   <li> <a href="services.html"> services </a> </li>
                   <li> <a href="blog.html"> blog </a> </li>
                   <li> <a href="contact.html"> contact </a> </li>
@@ -100,19 +127,19 @@
 
             <div class="footer-icons">
 
-                <a href="https://www.facebook.com/Apolda-Kennels-148943101815749/">
-                      <img src="assets/src/img/facebook.svg" alt="Facebook Icon" title="Facebook Icon" /> </a>
+                <a  href="https://www.facebook.com/Apolda-Kennels-148943101815749/">
+                  <img  class="foot-f" target="_blank" src="assets/src/img/facebook.svg" alt="Facebook Icon" title="Facebook Icon"/></a>
 
-                <a href="https://plus.google.com/+ApoldaKennelsAurora?hl=en">
-                      <img src="assets/src/img/googleplus.svg" alt="Google+ Icon" title="Google+ Icon" /> </a>
+                <a  href="https://plus.google.com/+ApoldaKennelsAurora?hl=en">
+                  <img class="foot-g" target="_blank" src="assets/src/img/googleplus.svg" alt="Google+ Icon" title="Google+ Icon"/></a>
 
-                <a href="https://www.yelp.com/biz/apolda-kennels-aurora-2">
-                      <img src="assets/src/img/yelp.svg" alt="Yelp Icon" title="Yelp Icon" /> </a>
+                <a  href="https://www.yelp.com/biz/apolda-kennels-aurora-2">
+                  <img class="foot-y" target="_blank" src="assets/src/img/yelp.svg" alt="Yelp Icon" title="Yelp Icon"/></a>
 
             </div>
-
         </footer>
 
+      </main>
 
         <script src="assets/src/js/app.js" charset="utf-8"></script>
         <script src="jquery-3.2.1.min.js"></script>

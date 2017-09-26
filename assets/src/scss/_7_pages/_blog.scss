@@ -1,0 +1,106 @@
+.grid-blog {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "nav"
+    "latest-posts-section"
+    "blog-wrapper"
+    "alerts"
+    "footer";
+}
+
+.latest-posts-section{
+  background-color: $darkgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.latest-posts{
+  background-color: white;
+  width: 300px;
+  margin: 4%;
+  img{
+    width: 20%;
+    display: inline;
+    padding: 2%;
+  }
+}
+
+.latest-title{
+  color:$gray;
+  font-family: $mont;
+  padding: 2%;
+}
+
+.latest-title:hover{
+  color:$darkred
+}
+
+// CARDS
+
+.blog-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.blog {
+  background: white;
+  border: 1px solid #ccc;
+  margin: 2%;
+  padding: 10px;
+  flex-grow: 1;
+  width: 83%;
+  color: $gray;
+  font-family: $mont;
+  margin-top: 20px;
+
+
+  .red-arrow{
+    float: right;
+  }
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.blog__image img {
+  width: 100%;
+}
+
+.card__read-more {
+  align-self: flex-end;
+  margin-top: auto;
+  width: 100%;
+}
+
+.blog-header{
+  font-size: em(19);
+}
+
+.blog-date{
+  font-size: em(12);
+  font-style: italic;
+}
+
+// BLOG ALERTS
+
+.alerts{
+  background-color: $darkgray;
+
+  h3{
+    padding: 3%;
+    margin: 0%;
+  }
+
+  .red-arrow{
+    margin: auto;
+    display: block;
+    padding-bottom: 3%;
+    width: 12%;
+  }
+}

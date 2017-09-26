@@ -1,0 +1,81 @@
+.grid-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "nav"
+    "about-sec"
+    "home-away"
+    "red-quote"
+    "choose-us"
+    "footer";
+}
+
+.about-sec{
+  background-color: $darkgray;
+  padding: 2%;
+  width: 96%;
+}
+
+.about-sec h1{
+  text-align: center;
+}
+.about-sec p{
+  color: white;
+}
+
+.sitting-dog{
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+
+.home-away{
+  background-color: $red;
+  padding: 2%;
+  width: 96%;
+}
+
+.home-away h1{
+  text-align: center;
+}
+
+.home-away p{
+  color: white;
+}
+
+.choose-us{
+  background-color: $darkred;
+}
+
+.choose-us h4{
+  text-transform: uppercase;
+  color: white;
+  font-family: $raleway;
+  font-size: em(24);
+  text-align: center;
+}
+
+.choose-us ul{
+  background-color: $darkgray;
+  @include no-bullets;
+  vertical-align: middle;
+  font-family: $mont;
+  color: white;
+  text-transform: uppercase;
+  font-size: em(22);
+  text-align: center;
+}
+
+.choose-us ul img{
+  width: 8%;
+  padding-top: 20px;
+}
+
+.red-quote{
+  background-color: white;
+  color: $red;
+  font-family: $raleway;
+  font-weight: bolder;
+  padding: 1%;
+  text-align: center;
+  vertical-align: center;
+}

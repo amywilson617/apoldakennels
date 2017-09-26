@@ -1,0 +1,83 @@
+.grid-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "nav"
+    "services"
+    "pet-lover"
+    "golden"
+    "footer";
+}
+
+.services{
+  background-color: $darkgray;
+  padding: 3%;
+}
+
+.service-head{
+  text-transform: uppercase;
+  font-size: em(34);
+}
+
+.icon{
+  width: 20%;
+  margin: auto;
+  display: block;
+}
+
+.service-card{
+  background-color: $darkred;
+  margin: 3%;
+  padding: 5%;
+}
+
+.service-card .read-more{
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.service-card .read-more:hover{
+  text-align: center;
+  color: $darkgray;
+  text-decoration: none;
+}
+
+.service-card .body-copy{
+  color: white;
+  text-align: center;
+}
+
+.white-arrow{
+  width: 10%;
+  margin: auto;
+  display: block;
+}
+
+.white-arrow:hover {
+  color:$darkgray;
+}
+
+.pet-lover{
+  background-color: $red;
+  padding: 2%;
+}
+
+.pet-lover ul{
+  @include no-bullets;
+  color: white;
+  display: inline;
+}
+
+.pet-lover li{
+  display: inline;
+  margin-bottom: 3%;
+}
+
+.pet-lover ul li img{
+  margin-bottom: 3%;
+  width: 5%;
+}
+
+.golden{
+  width:100%
+}

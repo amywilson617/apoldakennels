@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="/assets/dist/css/main.css" />
   </head>
   <body>
+  <main class="grid-grooming">
 
     <!-- NAV -->
         <nav>
 
-            <img src="assets/src/img/apolda-logo.png" alt="Logo" title="Logo" />
+            <img class="logo" src="assets/src/img/apolda-logo.png" alt="Logo" title="Logo" />
 
             <ul>
                 <li> <a href="index.html"> home </a> </li>
-                <li> <a href="aboutus.html"> about us </a> </li>
+                <li> <a href="about.html"> about us </a> </li>
                 <li> <a href="services.html"> services </a> </li>
                 <li> <a href="blog.html"> blog </a> </li>
                 <li> <a href="contact.html"> contact </a> </li>
@@ -27,7 +28,8 @@
         <div class="reservations">
 
             <p> To make reservations, contact us at <span class="phone">
-              630.898.2947 </span> or <a href="mailto:apoldakennels@mac.com"> email us</a> </p>
+              630.898.2947 </span> or <a href="mailto:apoldakennels@mac.com">
+                <span class="phone">email us </span></a> </p>
 
         </div>
 
@@ -36,7 +38,7 @@
 
           <h3> Keep Your Pal Looking Their Best </h3>
 
-              <p class="body-copy">Keeping your pet groomed, clean, and looking
+              <p class="body-copy"> Keeping your pet groomed, clean, and looking
                 their best is not only good for the looks and smell of our pals,
                 it also can be healthier for them as well. For more than a quarter
                 century, Apolda Kennels has been providing experienced and affordable
@@ -75,37 +77,54 @@
                 the look to the preferred breed for mixed breeds. Fees for our bathing
                 and grooming services are variable on the size and coat of the dog. </p>
 
-
         </section>
 
         <!-- GRAY INFO -->
         <section class="gray-info">
 
+
           <h3> Rates </h3>
 
-                  <ul class="rates">
+          <table class="rwd-table">
+              <tr>
+                <th> Service </th>
+                <th> Price </th>
+              </tr>
 
-                      <li> Hair Cuts <span class="price"> | $35 and up, dependent on size and condition </span> </li>
-                      <li> Baths <span class="price"> | $20 and up, dependent on size and condition </span> </li>
-                      <li> Nail Trims <span class="price"> | $10 (except $5 on Tuesday) </span> </li>
-                      <li> Flea and Tick Baths <span class="price"> | priced upon request </span> </li>
+              <tr class="tr1">
+                  <td data-th="Service"> Haircuts </td>
+                  <td data-th="Price"> $35 and up </td>
+              </tr>
 
-                  </ul>
+              <tr >
+                  <td data-th="Service"> Baths </td>
+                  <td data-th="Price"> $20 and up </td>
+              </tr>
 
-                  <div>
-                      <a href="mailto:apoldakennels@mac.com" class="white-contact"> Contact Us For a Quote </a>
-                      <a href="mailto:apoldakennels@mac.com"> <img src="assets/src/img/red-arrow.svg" alt="arrow" title ="arrow"> </a>"
+              <tr class="tr1">
+                  <td data-th="Service"> Nail Trims </td>
+                  <td data-th="Price"> $10 | $5 Tuesday's! </td>
+              </tr>
+
+              <tr>
+                  <td data-th="Service"> Flea and Tick Baths </td>
+                  <td data-th="Price"> Priced upon request </td>
+              </tr>
+          </table>
+
+                  <div class="quote">
+                      <a href="mailto:apoldakennels@mac.com" class="white-contact"> Get a Quote </a>
+                      <a href="mailto:apoldakennels@mac.com"> <img src="assets/src/img/red-arrow.svg" class="red-arrow" alt="arrow" title ="arrow"> </a>
                   </div>
 
         </section>
-
 
         <!-- FOOTER -->
         <footer>
 
             <ul>
                   <li> <a href="index.html"> home </a> </li>
-                  <li> <a href="aboutus.html"> about us </a> </li>
+                  <li> <a href="about.html"> about us </a> </li>
                   <li> <a href="services.html"> services </a> </li>
                   <li> <a href="blog.html"> blog </a> </li>
                   <li> <a href="contact.html"> contact </a> </li>
@@ -116,19 +135,20 @@
 
             <div class="footer-icons">
 
-                <a href="https://www.facebook.com/Apolda-Kennels-148943101815749/">
-                      <img src="assets/src/img/facebook.svg" alt="Facebook Icon" title="Facebook Icon" /> </a>
+                <a  href="https://www.facebook.com/Apolda-Kennels-148943101815749/">
+                  <img  class="foot-f" target="_blank" src="assets/src/img/facebook.svg" alt="Facebook Icon" title="Facebook Icon"/></a>
 
-                <a href="https://plus.google.com/+ApoldaKennelsAurora?hl=en">
-                      <img src="assets/src/img/googleplus.svg" alt="Google+ Icon" title="Google+ Icon" /> </a>
+                <a  href="https://plus.google.com/+ApoldaKennelsAurora?hl=en">
+                  <img class="foot-g" target="_blank" src="assets/src/img/googleplus.svg" alt="Google+ Icon" title="Google+ Icon"/></a>
 
-                <a href="https://www.yelp.com/biz/apolda-kennels-aurora-2">
-                      <img src="assets/src/img/yelp.svg" alt="Yelp Icon" title="Yelp Icon" /> </a>
+                <a  href="https://www.yelp.com/biz/apolda-kennels-aurora-2">
+                  <img class="foot-y" target="_blank" src="assets/src/img/yelp.svg" alt="Yelp Icon" title="Yelp Icon"/></a>
 
             </div>
 
         </footer>
 
+    </main>
 
         <script src="assets/src/js/app.js" charset="utf-8"></script>
         <script src="jquery-3.2.1.min.js"></script>

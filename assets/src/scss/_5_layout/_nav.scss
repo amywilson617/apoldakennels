@@ -2,10 +2,47 @@
 #NAV
 /*-------------*/
 
+.logo{
+	padding-top: 7%;
+	padding-left: 7%;
+	width: 30%;
+	margin: auto;
+	display: block;
+	float: left;
+}
 
+nav {
+	font-family: $raleway;
 
+	ul {
 
-// NAV EXAMPLE BELOW
+		> li {
+			@include no-bullets;
+			color: $darkgray;
+			text-align: right;
+			font-size: em(23);
+			line-height: em(42);
+			text-decoration: none;
+			margin-right: 3%;
+			width: 90%;
 
+			> a {
+					text-decoration: none;
+					color: $darkgray;
 
-  // NAV EXAMPLE ABOVE
+				a:visited{
+					color:$darkgray;
+				}
+
+				a:active{
+					color: $darkred;
+				}
+
+				&:hover {
+					color: $red;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

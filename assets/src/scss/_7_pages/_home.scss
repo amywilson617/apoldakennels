@@ -1,0 +1,95 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "nav"
+    "passion"
+    "connect"
+    "footer";
+}
+
+.passion{
+  background-color: $red;
+  padding: 4%;
+}
+
+.p {
+  color: white;
+  font-family: $mont;
+}
+
+.call-to-action {
+  color: $darkgray;
+  font-size: em(24);
+  width: 50%;
+  clear: none;
+  font-family: $mont;
+  padding-top: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+.call-to-action:hover {
+  color: white;
+}
+
+.connect{
+  background-color: white;
+}
+
+.home-icons{
+  width: 70%;
+  margin: auto;
+}
+
+
+.big-f{
+  width: 10%;
+  margin: auto;
+  margin-left: 25%;
+  padding: 2%;
+}
+
+.big-f:hover{
+  opacity: 0.3;
+}
+
+.big-g{
+  width: 10%;
+  margin: auto;
+  padding: 2%;
+}
+
+.big-g:hover{
+  opacity: 0.3;
+}
+
+.big-y{
+  width: 10%;
+  margin: auto;
+  padding: 2%;
+}
+
+.big-y:hover{
+  opacity: 0.3;
+}
+
+.connect p{
+  text-align: center;
+}
+
+.upper {
+  color: $darkgray;
+  font-family: $mont;
+  text-transform: uppercase;
+  padding: 3%;
+  font-weight: lighter;
+}
+
+.mica{
+  width: 50%;
+  float: right;
+  vertical-align: bottom;
+  padding: 0%;
+  clear: none;
+}
