@@ -92,9 +92,13 @@
 .alerts{
   background-color: $darkgray;
 
-  h3{
+  h3 {
     padding: 3%;
     margin: 0%;
+
+    &:hover{
+      color: $darkred;
+    }
   }
 
   .red-arrow{

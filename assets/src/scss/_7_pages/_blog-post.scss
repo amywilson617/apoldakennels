@@ -1,0 +1,78 @@
+.grid-blog-post {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "nav"
+    "blog-full"
+    "blog-search"
+    "recent-posts"
+    "black-lab"
+    "footer";
+}
+
+.blog-full{
+  color: $gray;
+  font-family: $mont;
+  padding: 2%;
+
+  .blog-date {
+    font-size: em(12);
+    font-style: italic;
+    color: $darkred;
+  }
+
+   img{
+     width: 90%;
+     display: block;
+     margin: auto;
+   }
+
+  h3{
+    color: $gray;
+      border-top: 2px $darkgray solid;
+  }
+}
+
+.blog-content{
+  background-color: white;
+  padding: 2%;
+  border-top: 2px $darkgray solid;
+}
+
+.blog-search{
+  background-color: $darkgray;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.text{
+  height: 20px;
+  width: 90%;
+  margin: auto;
+  display: block;
+  padding: 2%;
+  font-family: $raleway;
+  font-size: em(12);
+}
+
+.submit{
+  color: white;
+  background-color: $red;
+  font-family: $raleway;
+  font-size: em(12);
+  width: 23%;
+  display: block;
+  padding: 2%;
+  margin: auto;
+}
+
+.recent-posts ul{
+  @include no-bullets;
+  display: inline;
+  margin-bottom: 3%;
+}
+
+.black-lab{
+  width: 90%;
+  display: block;
+  margin: auto;
+}

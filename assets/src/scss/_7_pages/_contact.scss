@@ -1,0 +1,107 @@
+.grid-contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "nav"
+    "mica-looking"
+    "shout"
+    "jiffy"
+    "hours"
+    "form"
+    "footer";
+}
+
+.mica-looking{
+  width: 90%;
+  margin: auto;
+  display: block;
+}
+
+.shout{
+  background-color: $gray;
+
+  img{
+    width: 10%;
+  }
+}
+
+ul{
+  @include no-bullets;
+  color: white;
+  font-family: $mont;
+  padding: 3%;
+  text-align: center;
+
+  a{
+    color: white
+}
+    a:hover{
+      color: $darkred;
+  }
+}
+
+.jiffy h3{
+  color: $darkgray;
+}
+
+form{
+  background-color: $darkgray;
+  padding: 3%;
+
+  label{
+    color: white;
+    font-family: $mont;
+    font-size: em(20);
+    padding: 3%;
+  }
+
+  textarea{
+    font-family: $mont;
+    color: $gray;
+    font-size: em(18);
+    padding: 1%;
+
+  }
+
+  input{
+    font-family: $mont;
+    color: $gray;
+    font-size: em(18);
+    padding: 1%;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+
+.entry {
+  text-align: center;
+  grid-column: span 2;
+  display: inline;
+}
+
+.entry--horizontal {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.hours table{
+  border: none;
+  margin-bottom: 50px;
+}
+
+.price{
+  color: $gray;
+}
+
+.button {
+  width: 30%;
+  color: white;
+  background-color: $red;
+  padding: 2%;
+  font-family: $raleway;
+  font-size: em(18);
+}

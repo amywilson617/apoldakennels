@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/assets/dist/css/main.css" />
   </head>
   <body>
-
+<main class="grid-contact"
     <!-- NAV -->
         <nav>
 
@@ -41,10 +41,8 @@
               </ul>
       </section>
 
-      <section class="mica-running-section">
-          <img src="assets/src/img/mica-running.png" class="mica-running" alt="Mica">
+      <section class="jiffy">
           <h3> We'll get back to you in a jiffy!</h3>
-
       </section>
 
     </section>
@@ -52,38 +50,69 @@
     <!-- HOURS -->
       <section class="hours">
 
-          <ul class="hours-list">
-                <li> Monday <span class="price"> 8 AM - 5 PM </span> </li>
-                <li> Tuesday <span class="price"> 8 AM - 5 PM </span> </li>
-                <li> Wednesday <span class="price"> 8 AM - 10:30 AM </span> </li>
-                <li> Thursday <span class="price"> 8 AM - 5 PM </span> </li>
-                <li> Friday <span class="price"> 8 AM - 5 PM </span> </li>
-                <li> Saturday <span class="price"> 8 AM - 1 PM </span> </li>
-                <li> Sunday <span class="price"> 9 AM - 10 AM </span> </li>
-          </ul>
+          <table class="rwd-table">
+              <tr>
+                <th> Day </th>
+                <th> Hours </th>
+              </tr>
+
+              <tr class="tr1">
+                  <td data-th="Day"> Monday </td>
+                  <td data-th="Hours"> 8 AM - 5 PM </td>
+              </tr>
+
+              <tr >
+                  <td data-th="Day"> Tuesday </td>
+                  <td data-th="Hours"> 8 AM - 5 PM </td>
+              </tr>
+
+              <tr class="tr1">
+                  <td data-th="Day"> Wednesday </td>
+                  <td data-th="Hours"> 8:30 Am - 10:30 AM </td>
+              </tr>
+
+              <tr>
+                  <td data-th="Day"> Thursday </td>
+                  <td data-th="Hours"> 8 AM - 5 PM </td>
+              </tr>
+
+              <tr class="tr1">
+                  <td data-th="Day"> Friday </td>
+                  <td data-th="Hours"> 8 AM - 5 PM </td>
+              </tr>
+
+              <tr>
+                  <td data-th="Day"> Saturday </td>
+                  <td data-th="Hours"> 8 AM - 1 PM </td>
+              </tr>
+
+              <tr class="tr1">
+                  <td data-th="Day"> Sunday </td>
+                  <td data-th="Hours"> 9 AM - 10 AM </td>
+              </tr>
+          </table>
 
     </section>
 
     <!-- FORM -->
 
+    <form  class="wrapper">
 
-    <form>
+        <label for="name"></label>
+        <input class="entry" type="text" id="name" name="name" placeholder="Your name...">
 
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name...">
-
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Your email...">
+        <label for="email"></label>
+        <input  class="entry" type="text" id="email" name="email" placeholder="Your email...">
 
 
-        <label for="subject">Comments</label>
-        <textarea id="subject" name="subject" placeholder="We are excited to hear from you!" style="height:200px"></textarea>
+        <label for="subject"></label>
+        <textarea class="entry entry--horizontal" id="subject" name="subject" placeholder="We are excited to hear from you!" style="height:200px"></textarea>
 
-        <button type="submit" value="Submit"> Submit <img src="assets/src/img/red-arrow.svg" alt="Arrow"> </button>
+        <button class="button" type="submit" value="Submit"> Submit </button>
 
     </form>
 
-  </main>
+
 
         <!-- FOOTER -->
           <footer>
@@ -114,8 +143,12 @@
 
           </footer>
 
+      </main>
+
           <script src="assets/src/js/app.js" charset="utf-8"></script>
           <script src="jquery-3.2.1.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" charset="utf-8"></script>
+        </main>
+
   </body>
 </html>
