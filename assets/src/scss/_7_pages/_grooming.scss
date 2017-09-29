@@ -30,13 +30,11 @@
 }
 
 .quote{
-  width: 20%;
+  width: 40%;
   margin: auto;
-  padding: 1%;
+  padding: 3%;
   background-color: $gray;
   text-align: center;
-  float: right;
-  margin-top: 5%;
 }
 
 .white-contact{
@@ -49,10 +47,64 @@
 }
 
 .white-contact:hover{
-    color: $darkred;
+    color: $darkgray;
   }
 
 .red-arrow{
-  width: 10%;
+  width: 12%;
+}
+
+// MEDIA QUERIES
+
+@include breakpoint(tablet){
+  .grid-grooming {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav"
+      "red-info"
+      "white-info"
+      "gray-info"
+      "footer";
+
+      .quote {
+        width: 10%;
+        padding: 1%;
+      }
+
+      .nav{
+        grid-column: span 2;
+      }
+
+      .red-info{
+        grid-column: span 1;
+        margin-top: 6%;
+      }
+
+      .white-info{
+        grid-column: span 1;
+        background-color: $gray;
+        margin-top: 6%;
+      }
+
+      .gray-info{
+        grid-column: span 2;
+      }
+
+      .footer{
+        grid-column: span 2;
+      }
+}
+}
+
+@include breakpoint(regular-screen){
+  .quote{
+    width: 12%;
+    margin: auto;
+    padding: 1%;
+  }
+
+  .red-arrow{
+    width: 30%;
+  }
 
 }

@@ -1,7 +1,8 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "nav"
+  grid-template-areas: "phone-number"
+    "nav"
     "passion"
     "connect"
     "footer";
@@ -10,11 +11,22 @@
 .passion{
   background-color: $red;
   padding: 4%;
+  text-align: center;
+}
+
+.phone-number{
+  clear: both;
+  float: right;
+}
+
+.phone-number:hover{
+  color: $darkgray;
 }
 
 .p {
   color: white;
   font-family: $mont;
+  padding: 3%;
 }
 
 .call-to-action {
@@ -23,6 +35,7 @@
   width: 50%;
   clear: none;
   font-family: $mont;
+  padding: 3%;
   padding-top: 30px;
 }
 
@@ -35,6 +48,7 @@ a {
 
 .connect{
   background-color: white;
+  padding: 4%;
 }
 
 .home-icons{
@@ -42,11 +56,9 @@ a {
   margin: auto;
 }
 
-
 .big-f{
   width: 10%;
   margin: auto;
-  margin-left: 25%;
   padding: 2%;
 }
 
@@ -93,3 +105,41 @@ a {
   padding: 0%;
   clear: none;
 }
+
+// MEDIA QUERIES
+
+ @include breakpoint(tablet){
+   .grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-template-rows: auto;
+     grid-template-areas:
+     "nav"
+       "passion"
+       "connect"
+       "footer";
+   }
+
+   .nav{
+     grid-column: span 2;
+   }
+
+   .passion{
+     grid-column: span 1;
+     margin-bottom: 4%;
+     background-color: $gray;
+   }
+
+   .connect{
+     grid-column: span 1;
+     background-color: $darkgray;
+     margin-bottom: 4%;
+     p{
+       color: white;
+     }
+   }
+
+   .footer{
+     grid-column: span 2;
+   }
+ }

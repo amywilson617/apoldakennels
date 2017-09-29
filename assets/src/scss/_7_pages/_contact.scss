@@ -1,27 +1,30 @@
-.grid-contact {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "nav"
-    "mica-looking"
-    "shout"
-    "jiffy"
-    "hours"
-    "form"
-    "footer";
-}
 
 .mica-looking{
   width: 90%;
   margin: auto;
   display: block;
+  margin-top: 6%;
 }
 
-.shout{
-  background-color: $gray;
+  .shout{
+    h3{
+      color: $darkgray;
+    }
+     img{
+       width: 8%;
+     }
 
-  img{
-    width: 10%;
-  }
+   ul{
+     color: $darkred;
+     line-height: em(30);
+     a{
+       color: $darkred;
+   }
+       a:hover{
+         color: $darkgray;
+
+     }
+   }
 }
 
 ul{
@@ -39,19 +42,48 @@ ul{
   }
 }
 
-.jiffy h3{
-  color: $darkgray;
+
+.hours table{
+  border: none;
+  margin-bottom: 50px;
 }
 
+.rwd-table{
+  margin: auto;
+  margin-top: 4%;
+  margin-bottom: 8%;
+  background-color: white;
+  border: 2px $darkgray solid;
+  width: 60%;
+    td{
+      background-color: none;
+      padding: none;
+    }
+}
+
+.avail-head{
+  color: $red;
+  font-size: em(20);
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.price{
+  color: $gray;
+}
+
+// FORM
+
 form{
-  background-color: $darkgray;
-  padding: 3%;
+  background-color: white;
+  padding: 2%;
+  width: 96%;
 
   label{
-    color: white;
+    color: $darkgray;
     font-family: $mont;
     font-size: em(20);
-    padding: 3%;
+    padding: 1%;
   }
 
   textarea{
@@ -59,7 +91,7 @@ form{
     color: $gray;
     font-size: em(18);
     padding: 1%;
-
+    width: 80%;
   }
 
   input{
@@ -70,38 +102,240 @@ form{
   }
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 10px;
-}
-
-.entry {
+body {
+  color: rgba(255, 255, 255, 1);
   text-align: center;
-  grid-column: span 2;
-  display: inline;
+  -webkit-font-smoothing: antialiased;
 }
 
-.entry--horizontal {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.hours table{
-  border: none;
+#contact-form {
+  max-width: 90%;
+  margin: 0 auto;
   margin-bottom: 50px;
 }
 
-.price{
-  color: $gray;
+label {
+  font-weight: 200;
 }
 
-.button {
-  width: 30%;
-  color: white;
-  background-color: $red;
-  padding: 2%;
-  font-family: $raleway;
-  font-size: em(18);
+textarea,
+input {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  text-align: center;
+  background: none;
+  font-weight: 500;
+  font-size: 25px;
+  color: $darkgray;
+  max-width: 90%;
+  padding: 1rem;
+  border: 2px dashed $darkgray;
+  box-sizing: border-box;
+  cursor: text;
 }
+
+textarea {
+  text-align: left;
+  /* overflow:hidden; */
+  resize: none;
+  width: 90%;
+  border-color: $darkgray;
+}
+
+textarea:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px dashed $darkgray;
+}
+
+textarea:focus:required:valid {
+  border: 2px dashed $darkgray;
+  border-bottom: 2px dashed $darkgray;
+}
+
+textarea:required:valid {
+  border-bottom: 2px dashed $darkgray;
+}
+
+input {
+  border-bottom: 2px dashed $darkgray;
+}
+
+input:required,
+textarea:required {
+  border-bottom: 2px dashed $darkgray;
+}
+
+input:focus {
+  border-bottom: 2px dashed $darkgray;
+  background-color: white;
+}
+
+input:required:valid {
+  border-bottom: 2px dashed $darkgray;
+}
+
+input:required:invalid {
+  color: $gray;;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  color: $gray;
+  font-style: italic;
+  font-weight: 400;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+
+  text-align: center;
+  color: $darkgray;
+  font-style: italic;
+  font-weight: 400;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+
+  text-align: center;
+  color: $darkgray;
+  font-style: italic;
+  font-weight: 400;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+  color: $darkgray;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.expanding {
+  vertical-align: top;
+}
+
+.send-icn {
+  fill: $gray;
+}
+
+.send-icn:hover {
+  fill: $darkred;
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 2vmax;
+}
+
+button:hover small {
+  opacity: 1;
+}
+
+small {
+  display: block;
+  opacity: 0;
+  font-family: $mont;
+  text-transform: uppercase;
+  color: $darkred;
+}
+
+.website {
+  opacity: 1;
+  font-size: 16px;
+  color: $darkgray;
+  position: relative;
+  text-align: center;
+  display: block;
+  margin-top: 7%;
+}
+
+.website a {
+  color: $darkgray;
+}
+
+.contact-form p{
+  font-family: $raleway;
+}
+
+.contact-head{
+  color: $darkgray;
+  font-size: em(26);
+  font-weight: bold;
+}
+
+// MEDIA QUERIES
+
+@include breakpoint(tablet){
+  .grid-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "nav"
+      "mica-looking"
+      "shout"
+      "rwd-table"
+      "contact-form"
+      "footer";
+    }
+    .nav{
+        grid-column: span 3;
+
+    }
+      .mica-looking{
+        grid-column: span 2;
+      }
+
+      .shout{
+        margin-top: 6%;
+        width: 90%;
+        h3{
+          color: $darkgray;
+        }
+        grid-column: span 1;
+        background-color: white;
+       ul{
+         color: $darkred;
+         line-height: em(30);
+         a{
+           color: $darkred;
+       }
+           a:hover{
+             color: $darkgray;
+
+         }
+       }
+      }
+
+      .rwd-table {
+        grid-column: span 1;
+        width: 90%;
+        margin-bottom: 4%;
+        margin: auto;
+
+      }
+
+      .contact-form{
+        grid-column: span 2;
+      }
+
+      .footer {
+        grid-column: span 3;
+      }
+
+      .grid-contact .rwd-table{
+        margin: 0%;
+        height: 100%;
+
+
+      }
+    }
+
+    @include breakpoint(regular-screen){
+      .mica-looking{
+        width: 50%;
+      }
+
+    }

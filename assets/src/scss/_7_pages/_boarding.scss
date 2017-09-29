@@ -41,6 +41,7 @@
   background-color: $red;
   padding: 3%;
   clear: both;
+  margin-top: 4%;
 }
 
 .red-info p{
@@ -65,8 +66,12 @@
 }
 
 .gray-info{
-  background-color: $darkgray;
+  background-color: white;
   padding: 3%;
+  h3{
+    color: $darkgray;
+    margin-bottom: 0%;
+  }
 }
 
 .rates {
@@ -77,6 +82,8 @@
   font-weight: bolder;
   font-family: $mont;
   padding: 4%;
+
+
 }
 
 .price{
@@ -94,7 +101,6 @@
 // TABLE
 
 th{
-  text-transform: uppercase;
   color: $red;
   font-size: em(25);
   text-align: center;
@@ -104,7 +110,6 @@ th{
 tr{
   text-align: center;
   color: $gray;
-
 }
 
 .tr1{
@@ -120,5 +125,75 @@ tr{
   margin: auto;
   padding: 2%;
   line-height: em(34);
-  border: $red 2px solid;
+  // border: $red 2px solid;
 }
+
+// MEDIA QUERIES
+
+@include breakpoint(tablet){
+  .grid-boarding {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav"
+      "red-info"
+      "white-info"
+      "red-bold"
+      "gray-info"
+      "footer";
+
+      .nav{
+        grid-column: span 2;
+      }
+
+      .red-info{
+        grid-column: span 1;
+        margin-top: 6%;
+      }
+
+      .white-info{
+        grid-column: span 1;
+        background-color: $gray;
+        margin-top: 6%;
+      }
+
+      .red-bold{
+        grid-column: span 1;
+        color: white;
+      }
+
+      .gray-info{
+        grid-column: span 2;
+      }
+
+      .footer{
+        grid-column: span 2;
+      }
+
+      .rwd-table {
+        background:$darkgray;
+        color: #fff;
+        overflow: hidden;
+        font-family: $mont;
+        width: 70%;
+        line-height: em(34);
+        background-color: white;
+        margin-bottom: 2%;
+      }
+
+      .quote {
+        width: 10%;
+        padding: 1%;
+      }
+}
+}
+
+// @include breakpoint(regular-screen){
+//   .grid-boarding {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//     grid-template-areas:
+//       "nav nav nav nav"
+//       "red-info white-info red-bold gray-info"
+//       "footer footer footer footer";
+//     }
+// }

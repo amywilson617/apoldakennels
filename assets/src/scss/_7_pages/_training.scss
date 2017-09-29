@@ -4,8 +4,71 @@
   font-size: em(16);
   background-color: $gray;
   margin-bottom: 30px;
+  grid-template-areas: "nav"
+    "red-info"
+    "white-info"
+    "gray-info"
+    "footer";
+}
+
+.grid-training .logo{
+  margin-bottom: 4%;
 }
 
 .gray-info img{
   margin-left: auto;
+}
+
+// MEDIA QUERIES
+
+@include breakpoint(tablet){
+  .grid-training {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav"
+      "red-info"
+      "white-info"
+      "gray-info"
+      "footer";
+
+
+      .nav{
+        grid-column: span 2;
+      }
+
+      .red-info{
+        grid-column: span 1;
+        margin-top: 6%;
+      }
+
+      .white-info{
+        grid-column: span 1;
+        background-color: $gray;
+        margin-top: 6%;
+      }
+
+      .gray-info{
+        grid-column: span 2;
+      }
+
+      .footer{
+        grid-column: span 2;
+      }
+
+      .quote {
+        width: 10%;
+        padding: 1%;
+      }
+
+      .rwd-table {
+        background:$darkgray;
+        color: #fff;
+        overflow: hidden;
+        font-family: $mont;
+        width: 70%;
+        line-height: em(34);
+        background-color: white;
+      }
+
+}
 }

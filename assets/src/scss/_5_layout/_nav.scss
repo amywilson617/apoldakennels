@@ -11,6 +11,12 @@
 	float: left;
 }
 
+ @include breakpoint(tablet){
+	 .logo{
+		 width: 20%;
+		 padding-top: 3%;
+	 }
+ }
 // nav {
 // 	font-family: $raleway;
 //
@@ -69,8 +75,7 @@
   user-select: none;
 }
 
-#menuToggle input
-{
+#menuToggle input{
   display: block;
   width: 40px;
   height: 32px;

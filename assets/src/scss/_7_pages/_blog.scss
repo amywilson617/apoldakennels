@@ -1,11 +1,14 @@
-.grid-blog {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "nav"
-    "latest-posts-section"
-    "blog-wrapper"
-    "alerts"
-    "footer";
+// .grid-blog {
+//   display: grid;
+//   grid-template-areas: "nav"
+//     "latest-posts-section"
+//     "blog"
+//     "alerts"
+//     "footer";
+// }
+
+.nav{
+  width: 100%;
 }
 
 .latest-posts-section{
@@ -14,17 +17,29 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: stretch;
+  align-content: center;
+  margin: auto;
+  margin-top: 180px;
+  width: 100%;
+
+  h3{
+    background-color: none;
+    width: 280px;
+    padding: 10px;
+  }
 
 }
 
 .latest-posts{
   background-color: white;
   width: 300px;
-  margin: 4%;
+  margin: 1%;
+  display: inline;
   img{
     width: 20%;
     display: inline;
-    padding: 2%;
+    padding: 1%;
   }
 }
 
@@ -45,6 +60,8 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: stretch;
+  align-content: center;
 
 }
 .blog {
@@ -53,14 +70,18 @@
   margin: 2%;
   padding: 10px;
   flex-grow: 1;
-  width: 83%;
   color: $gray;
   font-family: $mont;
-  margin-top: 20px;
-
+  width: 100%;
 
   .red-arrow{
     float: right;
+    width: 9%;
+    display: block;
+    text-align: center;
+    align-self: flex-end;
+    margin-top: 0%;
+    padding: 0%;
   }
 }
 
@@ -70,6 +91,7 @@
 
 .blog__image img {
   width: 100%;
+  height: auto;
 }
 
 .card__read-more {
@@ -90,21 +112,73 @@
 // BLOG ALERTS
 
 .alerts{
-  background-color: $darkgray;
+  background-color: white;
+  width: 100%;
 
   h3 {
-    padding: 3%;
+    padding: 1%;
+    color: $darkgray;
     margin: 0%;
 
     &:hover{
-      color: $darkred;
+      color: $gray;
     }
   }
 
   .red-arrow{
     margin: auto;
     display: block;
-    padding-bottom: 3%;
-    width: 12%;
+    padding-bottom: 1%;
+    width: 7%;
   }
+}
+
+
+// MEDIA QUERIES
+
+@media (min-width: 468px){
+  .blog__image{
+    width: 50%;
+    margin: auto;
+  }
+
+}
+
+@include breakpoint(tablet){
+
+      .blog{
+        width: 40%;
+      }
+      .alerts{
+        .red-arrow {
+          width: 3%;
+
+          h3{
+            padding: 0%;
+          }
+        }
+      }
+
+      .blog__image{
+        width: 70%;
+        margin: auto;
+      }
+}
+@include breakpoint(regular-screen){
+
+      .blog{
+        width: 17%;
+      }
+      .alerts{
+        .red-arrow {
+          width: 3%;
+          h3{
+            margin: 0%;
+          }
+        }
+      }
+      .blog__image{
+        width: 70%;
+        margin: auto;
+      }
 }

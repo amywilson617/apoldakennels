@@ -26,8 +26,8 @@
 
 .service-card{
   background-color: $darkred;
-  margin: 3%;
-  padding: 5%;
+  margin: 2%;
+  padding: 2%;
 }
 
 .service-card .read-more{
@@ -81,3 +81,78 @@
 .golden{
   width:100%
 }
+
+// MEDIA QUERIES
+
+ @include breakpoint(tablet){
+   .grid-about {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: auto;
+     grid-template-areas:  "nav"
+       "service-head"
+       "service-card"
+       "pet-lover"
+       "golden"
+       "footer";
+   }
+
+   .nav{
+     grid-column: span 3;
+   }
+
+    .service-head{
+      grid-column: span 3;
+  }
+
+   .services{
+     grid-column: span 3;
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+     justify-content: center;
+     flex-wrap: nowrap;
+     flex-flow: wrap;
+   }
+
+   .service-card{
+     flex-grow: 1;
+     flex-basis: auto;
+     width: 100px;
+     clear: both;
+   }
+
+   .pet-lover{
+     grid-column: span 2;
+     background-color: $darkred;
+   }
+
+   .golden{
+   grid-column: span 1;
+   }
+
+   .footer{
+     grid-column: span 3;
+   }
+
+   .red-quote{
+     text-align: center;
+     width: 100%;
+     margin: auto;
+     display: block;
+   }
+   .grid-about aside{
+     display: none;
+   }
+
+   .service-head{
+     padding: 0%;
+   }
+ }
+
+  @include breakpoint(regular-screen){
+    .pet-lover ul li img{
+      margin-bottom: 3%;
+      width: 3%;
+    }
+  }

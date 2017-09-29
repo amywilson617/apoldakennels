@@ -51,12 +51,12 @@ footer p{
 
 .footer-icons{
 	margin: auto;
+	width: 70%;
 }
 
 .foot-f{
 	width: 5%;
 	padding: 3%;
-	margin-left: 33%;
 }
 
 .foot-f:hover{
@@ -79,4 +79,34 @@ footer p{
 
 .foot-y:hover{
 	opacity: .5;
+}
+
+//MEDIA QUERIES
+
+@include breakpoint(tablet){
+
+	.foot-f{
+		width: 3%;
+		padding: 1%;
+	}
+
+	.foot-g{
+		width: 3%;
+		padding: 1%;
+	}
+
+	.foot-y{
+		width: 3%;
+		padding: 1%;
+	}
+}
+
+@include breakpoint(regular-screen){
+	footer{
+		padding: 0%;
+	}
+	li{
+		padding: 1%;
+	}
+
 }

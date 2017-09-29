@@ -18,6 +18,8 @@
     font-size: em(12);
     font-style: italic;
     color: $darkred;
+    padding:3%;
+    border-bottom: 2px $darkgray solid;
   }
 
    img{
@@ -27,31 +29,33 @@
    }
 
   h3{
-    color: $gray;
-      border-top: 2px $darkgray solid;
+      color: $gray;
+      margin-top: 2%;
   }
 }
 
 .blog-content{
   background-color: white;
   padding: 2%;
-  border-top: 2px $darkgray solid;
+  text-align: left;
 }
 
 .blog-search{
-  background-color: $darkgray;
+  background-color: white;
   padding-top: 4%;
   padding-bottom: 4%;
 }
 
 .text{
   height: 20px;
-  width: 90%;
+  width: 40%;
   margin: auto;
-  display: block;
+  display: inline;
   padding: 2%;
   font-family: $raleway;
-  font-size: em(12);
+  font-size: em(13);
+  color: white;
+  background-color: $darkgray;
 }
 
 .submit{
@@ -71,8 +75,59 @@
   margin-bottom: 3%;
 }
 
-.black-lab{
-  width: 90%;
-  display: block;
-  margin: auto;
+.recent-posts .red-arrow{
+  width: 5%;
+}
+
+// MEDIA QUERIES
+@include breakpoint(tablet){
+.recenth-posts img{
+  width: 5%;
+  }
+
+ .blog-full{
+   width: 90%;
+   margin: auto;
+ }
+
+  .blog-full img{
+    width: 70%;
+  }
+
+  .blog-search{
+    padding: 2%;
+  }
+
+  .submit{
+    width: 10%;
+    padding: 1%;
+  }
+
+  .recent-posts .red-arrow{
+    width: 3%;
+  }
+}
+
+@include breakpoint(regular-screen){
+.recent-posts img{
+  width: 5%;
+  }
+
+ .blog-full{
+   width: 70%;
+   margin: auto;
+ }
+
+ .blog-search{
+   padding: 1%;
+ }
+
+  .blog-full img{
+    width: 56%;
+  }
+
+  .submit{
+    width: 7%;
+    padding: 1%;
+  }
 }

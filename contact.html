@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/assets/dist/css/main.css" />
   </head>
   <body>
-<main class="grid-contact"
-    <!-- NAV -->
-        <nav>
+<main class="grid-contact">
+
+        <nav class="nav">
 
             <img class="logo" src="assets/src/img/apolda-logo.png" alt="Logo" title="Logo" />
 
@@ -23,15 +23,11 @@
 
         </nav>
 
-  <main>
-
 <!-- Give Us A Shout -->
 
-    <section class="top-row">
+        <img class="mica-looking" src="assets/src/img/mica-looking.png" alt="Mica" title="mica">
 
-      <img class="mica-looking" src="assets/src/img/mica-looking.png" alt="Mica" title="mica">
-
-      <section class="shout">
+        <section class="shout">
           <h3> Give Us A Shout. </h3>
 
               <ul class="contact-methods">
@@ -41,19 +37,50 @@
               </ul>
       </section>
 
-      <section class="jiffy">
-          <h3> We'll get back to you in a jiffy!</h3>
-      </section>
 
-    </section>
 
-    <!-- HOURS -->
-      <section class="hours">
+    <!-- FORM -->
 
+  <form class="contact-form">
+      <p class="contact-head">Contact Apolda Kennels</p>
+
+    <p>My
+        <label for="your-name">name</label> is
+        <input type="text" name="your-name" id="your-name" minlength="3" placeholder="(your name here)" required> and</p>
+
+    <p>my
+
+        <label for="email">email address</label> is
+        <input type="email" name="your-email" id="email" placeholder="(your email address)" required>
+    </p>
+
+    <p> I have a <label for="your-message">message</label> for you,</p>
+
+    <p>
+      <textarea name="your-message" id="your-message" placeholder="(your msg here)" class="expanding" required></textarea>
+    </p>
+
+    <p>
+        <button type="submit">
+
+          <svg version="1.1" class="send-icn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="36px" viewbox="0 0 100 36" enable-background="new 0 0 100 36" xml:space="preserve">
+
+                  <path d="M100,0L100,0 M23.8,7.1L100,0L40.9,36l-4.7-7.5L22,34.8l-4-11L0,30.5L16.4,8.7l5.4,15L23,7L23.8,7.1z M16.8,20.4l-1.5-4.3
+	                   l-5.1,6.7L16.8,20.4z M34.4,25.4l-8.1-13.1L25,29.6L34.4,25.4z M35.2,13.2l8.1,13.1L70,9.9L35.2,13.2z" />
+          </svg>
+
+      </button>
+
+  </p>
+
+</form>
+
+<!-- TABLE -->
           <table class="rwd-table">
+
               <tr>
-                <th> Day </th>
-                <th> Hours </th>
+                <th class="avail-head">Day </th>
+                <th class="avail-head"> Hours </th>
               </tr>
 
               <tr class="tr1">
@@ -68,7 +95,7 @@
 
               <tr class="tr1">
                   <td data-th="Day"> Wednesday </td>
-                  <td data-th="Hours"> 8:30 Am - 10:30 AM </td>
+                  <td data-th="Hours"> 8:30 AM - 10:30 AM </td>
               </tr>
 
               <tr>
@@ -92,35 +119,16 @@
               </tr>
           </table>
 
-    </section>
-
-    <!-- FORM -->
-
-    <form  class="wrapper">
-
-        <label for="name"></label>
-        <input class="entry" type="text" id="name" name="name" placeholder="Your name...">
-
-        <label for="email"></label>
-        <input  class="entry" type="text" id="email" name="email" placeholder="Your email...">
-
-
-        <label for="subject"></label>
-        <textarea class="entry entry--horizontal" id="subject" name="subject" placeholder="We are excited to hear from you!" style="height:200px"></textarea>
-
-        <button class="button" type="submit" value="Submit"> Submit </button>
-
-    </form>
-
-
-
         <!-- FOOTER -->
-          <footer>
+          <footer class="footer">
 
             <ul>
                 <li> <a href="index.html"> home </a> </li>
                 <li> <a href="about.html"> about us </a> </li>
                 <li> <a href="services.html"> services </a> </li>
+                <li> <a href="boarding.html"> boarding </a> </li>
+                <li> <a href="grooming.html"> grooming </a> </li>
+                <li> <a href="training.html"> training </a> </li>
                 <li> <a href="blog.html"> blog </a> </li>
                 <li> <a href="contact.html"> contact </a> </li>
             </ul>
@@ -143,12 +151,10 @@
 
           </footer>
 
-      </main>
-
           <script src="assets/src/js/app.js" charset="utf-8"></script>
           <script src="jquery-3.2.1.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" charset="utf-8"></script>
-        </main>
+      </main>
 
   </body>
 </html>
