@@ -8,9 +8,13 @@
     "footer";
 }
 
+.nav{
+  grid-area: "nav";
+}
 .services{
   background-color: $darkgray;
   padding: 3%;
+  grid-area: "services";
 }
 
 .service-head{
@@ -25,26 +29,30 @@
 }
 
 .service-card{
-  background-color: $darkred;
+  background-color: white;
   margin: 2%;
   padding: 2%;
+  h3{
+    color: gray;
+  }
 }
 
 .service-card .read-more{
-  text-align: center;
-  color: white;
-  text-decoration: none;
-}
-
-.service-card .read-more:hover{
   text-align: center;
   color: $darkgray;
   text-decoration: none;
 }
 
-.service-card .body-copy{
-  color: white;
+.service-card .read-more:hover{
   text-align: center;
+  color: $red;
+  text-decoration: none;
+}
+
+.service-card .body-copy{
+  color: gray;
+  text-align: center;
+  font-size: em(18);
 }
 
 .white-arrow{
@@ -58,8 +66,17 @@
 }
 
 .pet-lover{
-  background-color: $red;
+  background-color: white;
   padding: 2%;
+  grid-area: "pet-lover";
+
+  h4{
+    color: gray;
+  }
+
+  li{
+    color: $red;
+  }
 }
 
 .pet-lover ul{
@@ -79,7 +96,10 @@
 }
 
 .golden{
-  width:100%
+  width: 60%;
+  display: block;
+  margin: auto;
+  grid-area: "golden";
 }
 
 // MEDIA QUERIES
@@ -123,12 +143,20 @@
    }
 
    .pet-lover{
-     grid-column: span 2;
-     background-color: $darkred;
+     h4{
+       color: gray;
+     }
+
+     li{
+       color: $red;
+     }
+     grid-column: span 3;
+     background-color: white;
    }
 
-   .golden{
+   .golden {
    grid-column: span 1;
+   width: 30%;
    }
 
    .footer{
@@ -154,5 +182,9 @@
     .pet-lover ul li img{
       margin-bottom: 3%;
       width: 3%;
+    }
+
+    .golden{
+      width: 10%;
     }
   }

@@ -282,17 +282,20 @@ small {
     }
     .nav{
         grid-column: span 3;
+        grid-area: "nav";
 
     }
       .mica-looking{
         grid-column: span 2;
+        grid-area: "mica-looking";
       }
 
       .shout{
         margin-top: 6%;
         width: 90%;
+        grid-area: "shout";
         h3{
-          color: $darkgray;
+          color: $gray;
         }
         grid-column: span 1;
         background-color: white;
@@ -314,22 +317,22 @@ small {
         width: 90%;
         margin-bottom: 4%;
         margin: auto;
-
+        grid-area: "rwd-table";
       }
 
       .contact-form{
         grid-column: span 2;
+        grid-area: "contact-form";
       }
 
       .footer {
         grid-column: span 3;
+        grid-area: "footer";
       }
 
       .grid-contact .rwd-table{
-        margin: 0%;
-        height: 100%;
-
-
+          margin: 0%;
+        font-size: em(13);
       }
     }
 
@@ -337,5 +340,4 @@ small {
       .mica-looking{
         width: 50%;
       }
-
     }

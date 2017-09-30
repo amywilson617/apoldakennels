@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "nav"
+    "reservations"
     "red-info"
     "white-info"
     "red-bold"
@@ -9,20 +10,25 @@
     "footer";
 }
 
+.nav{
+  grid-area: "nav";
+  grid-column: span 1;
+}
+
 .reservations{
   color: $darkred;
   font-family: $raleway;
-  font-size: em(16);
-  float: left;
+  font-size: em(12);
+  font-weight: bold;
+  padding: 1%;
   width: 25%;
   text-align: center;
-  margin-left: 20px;
-  position: fixed;
- top: 0;
- left: 0;
- z-index: 999;
- width: 100%;
- height: 23px;
+  margin: auto;
+  margin-top: 14%;
+  border: solid $red 2px;
+  position: static;
+  grid-area: "reservations";
+  grid-column: span 1;
 
     a{
       text-decoration: none;
@@ -33,6 +39,7 @@
     }
 }
 
+
 .phone{
   color: $darkgray;
 }
@@ -42,6 +49,7 @@
   padding: 3%;
   clear: both;
   margin-top: 4%;
+  grid-area: "red-info";
 }
 
 .red-info p{
@@ -51,10 +59,15 @@
 .white-info{
   background-color: white;
   padding: 3%;
+  grid-area: "white-info";
 
   h3{
     color: $darkgray;
   }
+}
+
+h5{
+  margin-bottom: 0%;
 }
 
 .red-bold{
@@ -68,6 +81,7 @@
 .gray-info{
   background-color: white;
   padding: 3%;
+  grid-area: "gray-info";
   h3{
     color: $darkgray;
     margin-bottom: 0%;
@@ -82,8 +96,6 @@
   font-weight: bolder;
   font-family: $mont;
   padding: 4%;
-
-
 }
 
 .price{
@@ -103,29 +115,25 @@
 th{
   color: $red;
   font-size: em(25);
-  text-align: center;
+  text-align: left;
   margin-bottom: 30px;
 }
 
 tr{
-  text-align: center;
+  text-align: left;
   color: $gray;
+}
+
+.avail-head{
+  text-align: left;
 }
 
 .tr1{
   background-color: white;
 }
 
-.rwd-table {
-  background:$darkgray;
-  color: #fff;
-  overflow: hidden;
-  font-family: $mont;
-  width: 90%;
-  margin: auto;
-  padding: 2%;
-  line-height: em(34);
-  // border: $red 2px solid;
+.footer{
+  grid-area: "footer";
 }
 
 // MEDIA QUERIES
@@ -135,6 +143,7 @@ tr{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "nav"
+      "reservations"
       "red-info"
       "white-info"
       "red-bold"
@@ -143,6 +152,12 @@ tr{
 
       .nav{
         grid-column: span 2;
+      }
+
+      .reservations{
+        grid-column: span 2;
+        margin-top: 2%;
+        font-size: em(17);
       }
 
       .red-info{
@@ -154,15 +169,25 @@ tr{
         grid-column: span 1;
         background-color: $gray;
         margin-top: 6%;
+        h3{
+          color: white;
+        }
+        p{
+          color: white;
+        }
       }
 
       .red-bold{
         grid-column: span 1;
         color: white;
+        grid-area: "red-bold";
       }
 
       .gray-info{
         grid-column: span 2;
+        h3{
+          margin-bottom: 2%;
+        }
       }
 
       .footer{
@@ -177,7 +202,8 @@ tr{
         width: 70%;
         line-height: em(34);
         background-color: white;
-        margin-bottom: 2%;
+        margin-bottom: 20px;
+        padding: 1%;
       }
 
       .quote {

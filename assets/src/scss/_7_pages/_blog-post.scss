@@ -1,11 +1,10 @@
 .grid-blog-post {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1 fr;
   grid-template-areas: "nav"
     "blog-full"
     "blog-search"
     "recent-posts"
-    "black-lab"
     "footer";
 }
 
@@ -13,8 +12,9 @@
   color: $gray;
   font-family: $mont;
   padding: 2%;
+  grid-area: "blog-full";
 
-  .blog-date {
+.blog-date {
     font-size: em(12);
     font-style: italic;
     color: $darkred;
@@ -36,14 +36,14 @@
 
 .blog-content{
   background-color: white;
-  padding: 2%;
   text-align: left;
 }
 
 .blog-search{
-  background-color: white;
+  background-color: none;
   padding-top: 4%;
   padding-bottom: 4%;
+  grid-area: "blog-search";
 }
 
 .text{
@@ -54,7 +54,7 @@
   padding: 2%;
   font-family: $raleway;
   font-size: em(13);
-  color: white;
+  color: $gray;
   background-color: $darkgray;
 }
 
@@ -67,6 +67,10 @@
   display: block;
   padding: 2%;
   margin: auto;
+}
+
+.recent-posts{
+  grid-area: "recent-posts";
 }
 
 .recent-posts ul{

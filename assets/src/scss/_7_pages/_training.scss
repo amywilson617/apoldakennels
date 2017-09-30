@@ -1,23 +1,55 @@
 .grid-training th{
-  color: white;
+  color: $gray;
   text-transform: none;
   font-size: em(16);
-  background-color: $gray;
   margin-bottom: 30px;
   grid-template-areas: "nav"
+    "reservations"
     "red-info"
     "white-info"
     "gray-info"
     "footer";
 }
 
-.grid-training .logo{
-  margin-bottom: 4%;
-}
+// .grid-training .logo{
+//   margin-bottom: 8%;
+//   .red-info{
+//     margin-top: 4%
+//   }
+// }
 
 .gray-info img{
   margin-left: auto;
 }
+
+.reservations{
+  color: $darkred;
+  font-family: $raleway;
+  font-size: em(12);
+  font-weight: bold;
+  padding: 1%;
+  width: 25%;
+  text-align: center;
+  margin: auto;
+  margin-top: 30%;
+  border: solid $red 2px;
+  position: static;
+  grid-area: "reservations";
+  grid-column: span 1;
+
+    a{
+      text-decoration: none;
+    }
+
+    a:hover{
+      font-weight: bold;
+    }
+}
+
+// .rwd-table{
+//   padding: 1%;
+// }
+
 
 // MEDIA QUERIES
 
@@ -31,9 +63,14 @@
       "gray-info"
       "footer";
 
-
       .nav{
         grid-column: span 2;
+      }
+
+      .reservations{
+        grid-column: span 2;
+        margin-top: 2%;
+        font-size: em(17);
       }
 
       .red-info{
@@ -45,11 +82,27 @@
         grid-column: span 1;
         background-color: $gray;
         margin-top: 6%;
+        p{
+          color: white;
+        }
+      }
+
+      .white-info h3{
+        color: white;
       }
 
       .gray-info{
         grid-column: span 2;
+        margin: auto;
+        width: 100%;
       }
+
+    .rwd-table{
+      margin-top: 4%;
+      margin-bottom: 8%;
+      background-color: white;
+      width: 50%;
+    }
 
       .footer{
         grid-column: span 2;
@@ -59,16 +112,17 @@
         width: 10%;
         padding: 1%;
       }
-
-      .rwd-table {
-        background:$darkgray;
-        color: #fff;
-        overflow: hidden;
-        font-family: $mont;
-        width: 70%;
-        line-height: em(34);
-        background-color: white;
-      }
+      //
+      // .rwd-table {
+      //   background:$darkgray;
+      //   color: #fff;
+      //   overflow: hidden;
+      //   font-family: $mont;
+      //   width: 70%;
+      //   line-height: em(32);
+      //   background-color: white;
+      //   margin-bottom: 20px;
+      // }
 
 }
 }

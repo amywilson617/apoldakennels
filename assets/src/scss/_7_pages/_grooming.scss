@@ -2,23 +2,30 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "nav"
+  "reservations"
     "red-info"
     "white-info"
     "gray-info"
     "footer";
 }
 
+.nav{
+  grid-area: "nav";
+}
+
 .reservations{
   color: $darkred;
   font-family: $raleway;
-  font-size: em(16);
-  float: left;
+  font-size: em(12);
+  font-weight: bold;
+  padding: 1%;
   width: 25%;
   text-align: center;
-  position: absolute;
-  margin-top: 400px;
-  margin-left: 20px;
+  margin: auto;
+  margin-top: 14%;
   border: solid $red 2px;
+  position: static;
+  grid-area: "reservations";
 
     a{
       text-decoration: none;
@@ -33,12 +40,12 @@
   width: 40%;
   margin: auto;
   padding: 3%;
-  background-color: $gray;
+  background-color: white;
   text-align: center;
 }
 
 .white-contact{
-  color: white;
+  color: $darkred;
   font-family: $mont;
   text-transform: uppercase;
   text-align: center;
@@ -51,7 +58,14 @@
   }
 
 .red-arrow{
-  width: 12%;
+  width: 40%;
+}
+
+tr{
+  color: $gray;
+  font-family: $mont;
+  font-weight: bolder;
+  line-height: em(32);
 }
 
 // MEDIA QUERIES
@@ -61,6 +75,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "nav"
+    "reservations"
       "red-info"
       "white-info"
       "gray-info"
@@ -75,6 +90,12 @@
         grid-column: span 2;
       }
 
+      .reservations{
+        grid-column: span 2;
+        margin-top: 2%;
+        font-size: em(17);
+      }
+
       .red-info{
         grid-column: span 1;
         margin-top: 6%;
@@ -84,10 +105,33 @@
         grid-column: span 1;
         background-color: $gray;
         margin-top: 6%;
+
+        h3{
+          color: white;
+        }
+
+        p{
+          color: white;
+        }
       }
 
       .gray-info{
         grid-column: span 2;
+        h3{
+          margin-bottom: 2%;
+        }
+      }
+
+      .rwd-table {
+        background:$darkgray;
+        color: #fff;
+        overflow: hidden;
+        font-family: $mont;
+        width: 70%;
+        line-height: em(34);
+        background-color: white;
+        margin-bottom: 20px;
+        padding: 1%;
       }
 
       .footer{
