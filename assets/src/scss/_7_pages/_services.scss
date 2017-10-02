@@ -154,6 +154,10 @@
      background-color: white;
    }
 
+   .pet-lover ul li img{
+     width: 3%;
+   }
+
    .golden {
    grid-column: span 1;
    width: 30%;
@@ -181,7 +185,7 @@
   @include breakpoint(regular-screen){
     .pet-lover ul li img{
       margin-bottom: 3%;
-      width: 3%;
+      width: 2%;
     }
 
     .golden{

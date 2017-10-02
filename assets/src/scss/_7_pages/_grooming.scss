@@ -1,17 +1,3 @@
-.grid-grooming {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "nav"
-  "reservations"
-    "red-info"
-    "white-info"
-    "gray-info"
-    "footer";
-}
-
-.nav{
-  grid-area: "nav";
-}
 
 .reservations{
   color: $darkred;
@@ -57,10 +43,6 @@
     color: $darkgray;
   }
 
-.red-arrow{
-  width: 40%;
-}
-
 tr{
   color: $gray;
   font-family: $mont;
@@ -82,8 +64,12 @@ tr{
       "footer";
 
       .quote {
-        width: 10%;
+        width: 20%;
         padding: 1%;
+
+        .red-arrow{
+          width: 15%;
+        }
       }
 
       .nav{
@@ -145,6 +131,9 @@ tr{
     width: 12%;
     margin: auto;
     padding: 1%;
+    .red-arrow{
+      width: 20%;
+    }
   }
 
   .red-arrow{

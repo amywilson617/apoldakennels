@@ -5,17 +5,16 @@
 .logo{
 	padding-top: 1%;
 	padding-left: 7%;
-	width: 30%;
+	width: 25%;
 	margin: auto;
-	margin-bottom: 4%;
 	display: block;
 	float: left;
 }
 
 .nav{
-	width: 60%;
 	padding: 0%;
 	margin-right: 5%;
+	margin-bottom: 10%;
 }
 
 .full-nav{
@@ -31,6 +30,10 @@
 		font-size: em(20);
 		line-height: em(30);
 		}
+}
+.phone-number h2{
+	padding: 1%;
+	float: right;
 }
 
 // HAMBURGER NAV
@@ -75,7 +78,7 @@
 //   height: 6px;
 //   margin-bottom: 5px;
 //   position: relative;
-//   background-color: $darkgray;;
+//   background-color: $darkgray;
 //   border-radius: 3px;
 //   z-index: 1;
 //   transform-origin: 4px 0px;
@@ -146,8 +149,14 @@
 // MEDIA QUERIES
 
 @include breakpoint(tablet){
+
 	.logo{
-		padding-top: 3%;
+		padding-top: 0%;
+		width: 20%;
+	}
+
+	.nav{
+		margin-bottom: 0%;
 	}
 
 	.ham{
@@ -156,11 +165,14 @@
 
 .full-nav {
 	font-family: $raleway;
+	clear: both;
+
 
 	ul {
 		padding-right: 8%;
 		padding-top: 3%;
 		padding-bottom: 0%;
+
 
 		> li {
 			@include no-bullets;
@@ -188,5 +200,38 @@
 			}
 		}
 	}
+	}
+}
+
+@include breakpoint(regular-screen){
+	.logo{
+		padding-top: 3%;
+		width: 15%;
+		margin-bottom: 0%;
+	}
+
+	.phone-number h2{
+		padding: 1%;
+		float: right;
+	}
+
+	.main{
+		display: flex;
+	}
+
+
+	.full-nav{
+		font-size: em(12);
+		margin-bottom: 0%;
+			ul{
+				margin-bottom: 0%;
+				padding-bottom: 0%;
+				margin-top: 15%;
+				li{
+					display: inline;
+					padding-right: 3%;
+					padding-left: 3%;
+				}
+			}
 	}
 }

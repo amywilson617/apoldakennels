@@ -1,19 +1,13 @@
 
-.full-nav{
-  grid-area: "full-nav";
-}
-
 .passion{
   background-color: $red;
   padding: 4%;
   text-align: center;
-  grid-area: "passion";
 }
 
 .phone-number{
-  clear: both;
+  width: 100%;
   float: right;
-  grid-area: "phone-number";
 }
 
 .phone-number:hover{
@@ -46,7 +40,9 @@ a {
 .connect{
   background-color: white;
   padding: 4%;
-  grid-area: "connect";
+    h2{
+      color: $darkgray;
+    }
 }
 
 .home-icons{
@@ -97,15 +93,11 @@ a {
 }
 
 .mica{
-  width: 50%;
+  width: 30%;
   float: right;
-  vertical-align: bottom;
+  margin-top: 40px;
   padding: 0%;
   clear: none;
-}
-
-.footer{
-  grid-area: "footer";
 }
 
 // MEDIA QUERIES
@@ -114,7 +106,6 @@ a {
    .grid {
      display: grid;
      grid-template-columns: 1fr 1fr;
-     grid-template-rows: auto;
      grid-template-areas:
       "phone-number"
       "logo"
@@ -127,7 +118,7 @@ a {
    .phone-number{
      grid-column: span 2;
      margin-bottom: 0%;
-     padding-bottom: 0%;
+     padding: 0%;
      grid-area: "phone-number";
    }
 
@@ -137,7 +128,9 @@ a {
    }
 
    .full-nav{
-     grid-column: span 2;
+     grid-column: span 3;
+     grid-area: "full-nav";
+     padding-right: 6%;
    }
 
    .passion{
@@ -145,6 +138,7 @@ a {
      margin-bottom: 4%;
      background-color: $gray;
      margin-top: 4%;
+     grid-area: "passion";
    }
 
    .connect{
@@ -152,6 +146,7 @@ a {
      background-color: $darkgray;
      margin-bottom: 4%;
      margin-top: 4%;
+     grid-area: "connect";
      p{
        color: white;
      }
@@ -159,5 +154,6 @@ a {
 
    .footer{
      grid-column: span 2;
+     grid-area: "footer";
    }
  }

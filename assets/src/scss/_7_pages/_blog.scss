@@ -11,6 +11,7 @@
 .nav{
   width: 100%;
   grid-area: "nav";
+  grid-column: span 3;
 }
 
 .latest-posts-section{
@@ -68,17 +69,25 @@
   flex-wrap: wrap;
   align-items: stretch;
   align-content: center;
+  width: 90%;
+  margin: auto;
+
   .red-arrow{
-    width: 10%;
+    width: 6%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin-top: 40px;
   }
 }
 .blog-content{
-  margin: 4%;
-
-
-
+  margin: 8%;
   display: flex;
   flex-direction: row;
+  grid-column: span 3;
+
   img{
     align-items: flex-end;
   }
@@ -95,15 +104,22 @@
   font-family: $mont;
   width: 100%;
   grid-area: "blog";
+  position: relative;
+
 }
 
 .card:last-child {
   margin-right: 0;
 }
 
-.blog__image img {
+.blog__image {
+  img {
   width: 100%;
   height: auto;
+  display: inline-block;
+  width: 90%;
+  background-position: center;
+  background-size: cover;
 }
 
 .card__read-more {
@@ -133,6 +149,7 @@
   background-color: white;
   width: 100%;
   grid-area: "alerts";
+  grid-column: span 3;
 
   h3 {
     padding: 1%;
@@ -152,6 +169,11 @@
   }
 }
 
+.footer{
+  grid-area: "footer";
+  grid-column: span 3;
+}
+
 // MEDIA QUERIES
 
 @media (min-width: 468px){
@@ -163,6 +185,10 @@
   .alerts{
     grid-column: span 3;
   }
+  .blog{
+    grid-column: span 3;
+    width: 100%;
+  }
 }
 
 @include breakpoint(tablet){
@@ -170,9 +196,9 @@
       .blog{
         width: 40%;
       }
-      .alerts{
+      .blog-wrapper{
         .red-arrow {
-          width: 3%;
+          width: 8%;
 
           h3{
             padding: 0%;
@@ -190,16 +216,17 @@
       .blog{
         width: 17%;
       }
-      .alerts{
+      .blog-wrapper{
         .red-arrow {
-          width: 3%;
+          width: 12%;
+          margin-top: 20%;
           h3{
             margin: 0%;
           }
         }
       }
       .blog__image{
-        width: 70%;
+        width: 90%;
         margin: auto;
       }
 }

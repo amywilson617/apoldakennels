@@ -3,12 +3,12 @@
   text-transform: none;
   font-size: em(16);
   margin-bottom: 30px;
-  grid-template-areas: "nav"
-    "reservations"
-    "red-info"
-    "white-info"
-    "gray-info"
-    "footer";
+  // grid-template-areas: "nav"
+  //   "reservations"
+  //   "red-info"
+  //   "white-info"
+  //   "gray-info"
+  //   "footer";
 }
 
 // .grid-training .logo{
@@ -35,7 +35,6 @@
   border: solid $red 2px;
   position: static;
   grid-area: "reservations";
-  grid-column: span 1;
 
     a{
       text-decoration: none;
@@ -109,8 +108,12 @@
       }
 
       .quote {
-        width: 10%;
+        width: 20%;
         padding: 1%;
+
+        .red-arrow{
+          width: 15%;
+        }
       }
       //
       // .rwd-table {

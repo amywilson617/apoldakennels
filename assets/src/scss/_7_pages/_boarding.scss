@@ -1,19 +1,4 @@
-.grid-boarding {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "nav"
-    "reservations"
-    "red-info"
-    "white-info"
-    "red-bold"
-    "gray-info"
-    "footer";
-}
 
-.nav{
-  grid-area: "nav";
-  grid-column: span 1;
-}
 
 .reservations{
   color: $darkred;
@@ -28,7 +13,6 @@
   border: solid $red 2px;
   position: static;
   grid-area: "reservations";
-  grid-column: span 1;
 
     a{
       text-decoration: none;
@@ -38,7 +22,6 @@
       font-weight: bold;
     }
 }
-
 
 .phone{
   color: $darkgray;
@@ -60,10 +43,9 @@
   background-color: white;
   padding: 3%;
   grid-area: "white-info";
-
-  h3{
-    color: $darkgray;
-  }
+    h3{
+      color: $darkgray;
+    }
 }
 
 h5{
@@ -132,6 +114,10 @@ tr{
   background-color: white;
 }
 
+.quote .red-arrow{
+  width: 10%;
+}
+
 .footer{
   grid-area: "footer";
 }
@@ -152,23 +138,27 @@ tr{
 
       .nav{
         grid-column: span 2;
+        grid-area: "nav";
       }
 
       .reservations{
         grid-column: span 2;
         margin-top: 2%;
         font-size: em(17);
+        grid-area: "reservations";
       }
 
       .red-info{
         grid-column: span 1;
         margin-top: 6%;
+        grid-area: "red-info";
       }
 
       .white-info{
         grid-column: span 1;
         background-color: $gray;
         margin-top: 6%;
+        grid-area: "white-info";
         h3{
           color: white;
         }
@@ -187,11 +177,13 @@ tr{
         grid-column: span 2;
         h3{
           margin-bottom: 2%;
+          grid-area: "gray-info";
         }
       }
 
       .footer{
         grid-column: span 2;
+        grid-area: "footer";
       }
 
       .rwd-table {
@@ -207,8 +199,12 @@ tr{
       }
 
       .quote {
-        width: 10%;
+        width: 20%;
         padding: 1%;
+
+        .red-arrow{
+          width: 15%;
+        }
       }
 }
 }
