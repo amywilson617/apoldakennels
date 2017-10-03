@@ -105,7 +105,6 @@
   width: 100%;
   grid-area: "blog";
   position: relative;
-
 }
 
 .card:last-child {
@@ -115,11 +114,13 @@
 .blog__image {
   img {
   width: 100%;
+  margin: auto;
   height: auto;
   display: inline-block;
   width: 90%;
   background-position: center;
   background-size: cover;
+}
 }
 
 .card__read-more {
@@ -228,5 +229,9 @@
       .blog__image{
         width: 90%;
         margin: auto;
+      }
+
+      .blog-content{
+        margin: 6%;
       }
 }

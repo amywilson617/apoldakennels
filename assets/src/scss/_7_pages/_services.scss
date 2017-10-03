@@ -1,16 +1,4 @@
-.grid-services {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "nav"
-    "services"
-    "pet-lover"
-    "golden"
-    "footer";
-}
 
-.nav{
-  grid-area: "nav";
-}
 .services{
   background-color: $darkgray;
   padding: 3%;
@@ -96,7 +84,7 @@
 }
 
 .golden{
-  width: 60%;
+  width: 40%;
   display: block;
   margin: auto;
   grid-area: "golden";

@@ -1,22 +1,9 @@
-.grid-about {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "nav"
-    "about-sec"
-    "home-away"
-    "red-quote"
-    "choose-us"
-    "footer";
-}
 
-.nav{
-  grid-area: "nav";
-}
+
 .about-sec{
   background-color: $darkgray;
   padding: 4%;
   margin-top: 4%;
-  grid-area: "about-sec";
 }
 
 .about-sec h1{
@@ -39,7 +26,6 @@
 .home-away{
   background-color: $red;
   padding: 8%;
-  grid-area: "home-away";
 }
 
 .home-away h1{
@@ -53,7 +39,6 @@
 .choose-us{
   background-color: white;
   padding: 2%;
-  grid-area: "choose-us";
 }
 
 .choose-us h4{
@@ -92,10 +77,6 @@
   grid-area: "red-quote";
 }
 
-.footer{
-  grid-area: "footer";
-}
-
 // MEDIA QUERIES
 
  @include breakpoint(tablet){
@@ -125,7 +106,7 @@
 
    .choose-us{
    grid-column: span 3;
- }
+   }
 
    .footer{
      grid-column: span 3;

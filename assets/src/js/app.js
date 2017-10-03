@@ -1,5 +1,5 @@
 
-jQuery ( function($) {
+jQuery (function($) {
 
 	var site = new SiteController($);
 	site.init();
@@ -12,7 +12,7 @@ function SiteController($)
 		initFitVids();
 	}
 
-	// MAKES VIDEOS RESIZE RESPONSIVELY
+// 	// MAKES VIDEOS RESIZE RESPONSIVELY
 	function initFitVids() {
 
 		$('.video').fitVids();
