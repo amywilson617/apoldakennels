@@ -8,6 +8,7 @@
 .phone-number{
   width: 100%;
   float: right;
+  margin-right: 2%;
 }
 
 .phone-number:hover{
@@ -42,6 +43,7 @@ a {
   padding: 4%;
     h2{
       color: $darkgray;
+      font-size: 1.8125em;
     }
 }
 
@@ -100,6 +102,14 @@ a {
   clear: none;
 }
 
+.video {
+  margin: auto;
+}
+
+.footer{
+  margin-top: 3%;
+}
+
 // MEDIA QUERIES
 
  @include breakpoint(tablet){
@@ -112,6 +122,7 @@ a {
        "full-nav"
        "passion"
        "connect"
+       "video"
        "footer";
    }
 
@@ -120,6 +131,7 @@ a {
      margin-bottom: 0%;
      padding: 0%;
      grid-area: "phone-number";
+     margin-right: 4%;
    }
 
    .logo{
@@ -141,19 +153,42 @@ a {
      grid-area: "passion";
    }
 
+   .video{
+     grid-column: span 2;
+     grid-area: "video";
+     grid-area: "video";
+
+   }
+
    .connect{
      grid-column: span 1;
      background-color: $darkgray;
      margin-bottom: 4%;
      margin-top: 4%;
      grid-area: "connect";
+
+     h2{
+       color: white;
+       font-size: 1.8125em;
+     }
+
      p{
        color: white;
      }
    }
 
    .footer{
+     margin-top: 2%;
      grid-column: span 2;
      grid-area: "footer";
    }
  }
+
+
+@include breakpoint(regular-screen){
+
+  .phone-number{
+    margin-right: 7%;
+  }
+
+}

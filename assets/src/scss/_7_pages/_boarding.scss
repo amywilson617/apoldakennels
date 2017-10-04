@@ -27,12 +27,13 @@
   color: $darkgray;
 }
 
+.grid-boarding{
 .red-info{
   background-color: $red;
   padding: 3%;
-  clear: both;
   margin-top: 4%;
-  grid-area: "red-info";
+  grid-column: span 1;
+}
 }
 
 .red-info p{
@@ -112,10 +113,6 @@ tr{
 
 .tr1{
   background-color: white;
-}
-
-.quote .red-arrow{
-  width: 10%;
 }
 
 .footer{
@@ -201,10 +198,6 @@ tr{
       .quote {
         width: 20%;
         padding: 1%;
-
-        .red-arrow{
-          width: 15%;
-        }
       }
 }
 }

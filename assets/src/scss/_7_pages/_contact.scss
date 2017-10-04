@@ -7,18 +7,46 @@
 }
 
   .shout{
+    position: relative;
     h3{
       color: $darkgray;
     }
      img{
-       width: 8%;
+       width: 5%;
+       position: absolute;
+       margin-left: -38px;
      }
 
    ul{
      color: $darkred;
      line-height: em(30);
+     @include no-bullets;
+     color: white;
+     font-family: $mont;
+     padding: 3%;
+     margin: auto;
+     width: 80%;
+     margin-left: 22%;
+     li{
+       line-height: em(40);
+       text-align: left;
+       margin: auto;
+       color: $darkred;
+     }
+
+
+     a{
+       color: white
+   }
+       a:hover{
+         color: $darkred;
+     }
+
+
      a{
        color: $darkred;
+
+
    }
        a:hover{
          color: $darkgray;
@@ -27,20 +55,8 @@
    }
 }
 
-ul{
-  @include no-bullets;
-  color: white;
-  font-family: $mont;
-  padding: 3%;
-  text-align: center;
 
-  a{
-    color: white
-}
-    a:hover{
-      color: $darkred;
-  }
-}
+
 
 
 .hours table{
@@ -295,6 +311,12 @@ small {
         margin-top: 6%;
         width: 90%;
         grid-area: "shout";
+
+        img{
+          margin-left: -46px;
+          margin-bottom: -14px;
+          width: 9%
+        }
         h3{
           color: $gray;
         }
@@ -303,6 +325,7 @@ small {
        ul{
          color: $darkred;
          line-height: em(30);
+
          a{
            color: $darkred;
        }
@@ -340,5 +363,12 @@ small {
     @include breakpoint(regular-screen){
       .mica-looking{
         width: 50%;
+
+        .shout{
+          img{
+            margin-left: -20px;
+            width: 4%;
+          }
+        }
       }
     }

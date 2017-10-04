@@ -3,20 +3,6 @@
   text-transform: none;
   font-size: em(16);
   margin-bottom: 30px;
-  // grid-template-areas: "nav"
-  //   "reservations"
-  //   "red-info"
-  //   "white-info"
-  //   "gray-info"
-  //   "footer";
-}
-
-// .grid-training .logo{
-//   margin-bottom: 8%;
-//   .red-info{
-//     margin-top: 4%
-//   }
-// }
 
 .gray-info img{
   margin-left: auto;
@@ -44,10 +30,15 @@
     }
 }
 
-// .rwd-table{
-//   padding: 1%;
-// }
-
+.grid-training{
+  .red-info{
+    background-color: $red;
+    padding: 3%;
+    margin-top: 4%;
+    grid-column: span 1;
+    color: white;
+  }
+}
 
 // MEDIA QUERIES
 
@@ -61,7 +52,7 @@
       "gray-info"
       "footer";
 
-      .full-nav{
+      .nav{
         grid-column: span 2;
       }
 
@@ -74,6 +65,7 @@
       .red-info{
         grid-column: span 1;
         margin-top: 6%;
+        background-color: $red;
       }
 
       .white-info{
@@ -109,9 +101,6 @@
       .quote {
         width: 20%;
         padding: 1%;
-
-        .red-arrow{
-          width: 15%;
         }
       }
       //

@@ -23,6 +23,10 @@
   h3{
     color: gray;
   }
+
+  a{
+    position: relative;
+  }
 }
 
 .service-card .read-more{
@@ -44,14 +48,12 @@
 }
 
 .white-arrow{
-  width: 6%;
+  width: 8%;
   margin: auto;
-  position: absolute;
-  // right: 0;
-  // bottom: 0;
-  padding-bottom: 14px;
-  margin-top: -43px;
-  margin-left: 35%;
+  // position: absolute;
+
+  // margin-top: -43px;
+  // margin-left: 34%;
 }
 
 .white-arrow:hover {
