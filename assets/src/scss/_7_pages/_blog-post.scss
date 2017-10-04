@@ -24,7 +24,7 @@
   }
 
 .blog-header{
-  margin-top: 20%;
+  margin-top: 2%;
 }
    img{
      width: 90%;
@@ -128,7 +128,6 @@
     width: 6%;
   }
   }
-
 }
 
 @include breakpoint(regular-screen){
@@ -140,7 +139,7 @@
    width: 70%;
    margin: auto;
    .blog-header{
-     margin-top: 0%;
+     margin-top: 15%;
    }
  }
 

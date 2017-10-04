@@ -31,7 +31,6 @@
   width: 25%;
   text-align: center;
   margin: auto;
-  margin-top: 30%;
   border: solid $red 2px;
   position: static;
   grid-area: "reservations";
@@ -62,7 +61,7 @@
       "gray-info"
       "footer";
 
-      .nav{
+      .full-nav{
         grid-column: span 2;
       }
 

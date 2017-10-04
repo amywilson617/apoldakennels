@@ -44,9 +44,14 @@
 }
 
 .white-arrow{
-  width: 10%;
+  width: 6%;
   margin: auto;
-  display: block;
+  position: absolute;
+  // right: 0;
+  // bottom: 0;
+  padding-bottom: 14px;
+  margin-top: -43px;
+  margin-left: 35%;
 }
 
 .white-arrow:hover {
@@ -57,6 +62,16 @@
   background-color: white;
   padding: 2%;
   grid-area: "pet-lover";
+   p{
+     text-align: center;
+   }
+
+  img{
+    width: 5%;
+    margin: auto;
+    display: block;
+    margin-bottom: 0%;
+  }
 
   h4{
     color: gray;
@@ -69,18 +84,31 @@
 
 .pet-lover ul{
   @include no-bullets;
-  color: white;
-  display: inline;
-}
+  vertical-align: middle;
+  display: inline-block;
+  font-family: $mont;
+  color: $gray;
+  text-transform: uppercase;
+  font-size: em(22);
+  padding: 2%;
 
-.pet-lover li{
-  display: inline;
-  margin-bottom: 3%;
-}
+  li{
+    text-align: left;
+    padding-top: 2%;
 
-.pet-lover ul li img{
-  margin-bottom: 3%;
-  width: 5%;
+    &:before {
+      mask: url('/assets/src/img/red-check.svg') left top no-repeat;
+      mask-size: 25px 25px;
+      background: $gray;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      content: '';
+      position: relative;
+      top: 3px;
+      margin-right: 5px;
+    }
+  }
 }
 
 .golden{
@@ -151,6 +179,16 @@
    width: 30%;
    }
 
+   .white-arrow{
+     width: 3%;
+     margin: auto;
+     position: absolute;
+     // right: 0;
+     // bottom: 0;
+     margin-top: -20px;
+    //  margin-left: 35%;
+   }
+
    .footer{
      grid-column: span 3;
    }
@@ -178,5 +216,9 @@
 
     .golden{
       width: 10%;
+    }
+
+    .services{
+      margin-top: 14%;
     }
   }

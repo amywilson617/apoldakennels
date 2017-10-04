@@ -1,5 +1,4 @@
 
-
 .about-sec{
   background-color: $darkgray;
   padding: 4%;
@@ -39,6 +38,9 @@
 .choose-us{
   background-color: white;
   padding: 2%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column,
 }
 
 .choose-us h4{
@@ -48,22 +50,43 @@
   font-size: em(24);
   text-align: center;
   padding-bottom: 0%;
+  margin: 0%;
 }
 
 .choose-us ul{
   @include no-bullets;
   vertical-align: middle;
+  display: inline-block;
   font-family: $mont;
   color: $gray;
   text-transform: uppercase;
   font-size: em(22);
-  text-align: center;
   padding: 2%;
+
+  li{
+    text-align: left;
+    padding-top: 2%;
+
+    &:before {
+      mask: url('/assets/src/img/red-check.svg') left top no-repeat;
+      mask-size: 25px 25px;
+      background: $gray;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      content: '';
+      position: relative;
+      top: 3px;
+      margin-right: 5px;
+    }
+  }
 }
 
 .choose-us ul img{
   width: 3%;
   padding-top: 20px;
+  position: relative;
+  top: 25px;
 }
 
 .red-quote{
@@ -128,13 +151,12 @@
     }
 
     .choose-us{
-      background-color: $darkred;
       padding: 1%;
     }
 
     .choose-us h4{
       text-transform: uppercase;
-      color: white;
+      color: $darkred;
       font-family: $raleway;
       font-size: em(24);
       text-align: center;
@@ -142,11 +164,10 @@
     }
 
     .choose-us ul{
-      background-color: $darkgray;
       @include no-bullets;
       vertical-align: middle;
       font-family: $mont;
-      color: white;
+      color: gray;
       text-transform: uppercase;
       font-size: em(22);
       text-align: center;

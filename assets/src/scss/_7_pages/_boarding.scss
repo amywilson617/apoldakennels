@@ -128,7 +128,7 @@ tr{
   .grid-boarding {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "nav"
+    grid-template-areas: "full-nav"
       "reservations"
       "red-info"
       "white-info"
@@ -136,9 +136,9 @@ tr{
       "gray-info"
       "footer";
 
-      .nav{
+      .full-nav{
         grid-column: span 2;
-        grid-area: "nav";
+        grid-area: "full-nav";
       }
 
       .reservations{
@@ -191,7 +191,7 @@ tr{
         color: #fff;
         overflow: hidden;
         font-family: $mont;
-        width: 70%;
+        width: 40%;
         line-height: em(34);
         background-color: white;
         margin-bottom: 20px;
