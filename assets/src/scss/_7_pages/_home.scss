@@ -124,7 +124,7 @@ iframe {
        "full-nav"
        "passion"
        "connect"
-       "video"
+       "movie"
        "footer";
    }
 
@@ -155,14 +155,6 @@ iframe {
      grid-area: "passion";
    }
 
-   .video{
-     grid-column: span 2;
-     grid-area: "video";
-      width: 50%;
-      margin: auto;
-
-   }
-
    .connect{
      grid-column: span 1;
      background-color: $darkgray;
@@ -180,9 +172,16 @@ iframe {
      }
    }
 
-   iframe {
-       position: relative;
-       width: 500px;
+   .movie{
+     width: 100%;
+     grid-column: span 2;
+     grid-area: "movie";
+   }
+   .movie-content{
+     position: relative;
+     width: 40%;
+     margin: auto;
+
    }
 
    .footer{
@@ -198,8 +197,17 @@ iframe {
   .phone-number{
     margin-right: 7%;
   }
-  .video{
-    width: 30%;
+
+  .movie{
+    width: 100%;
+    grid-column: span 2;
+    grid-area: "movie";
+  }
+  .movie-content{
+    position: relative;
+    width: 40%;
+    margin: auto;
+
   }
 
 }

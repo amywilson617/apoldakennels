@@ -30,13 +30,15 @@
     }
 }
 
+.red-info{
+  color: $red;
+}
+
 .grid-training{
   .red-info{
     background-color: $red;
     padding: 3%;
     margin-top: 4%;
-    grid-column: span 1;
-    color: white;
   }
 }
 
@@ -57,7 +59,6 @@
       }
 
       .reservations{
-        grid-column: span 2;
         margin-top: 2%;
         font-size: em(17);
       }
@@ -103,17 +104,5 @@
         padding: 1%;
         }
       }
-      //
-      // .rwd-table {
-      //   background:$darkgray;
-      //   color: #fff;
-      //   overflow: hidden;
-      //   font-family: $mont;
-      //   width: 70%;
-      //   line-height: em(32);
-      //   background-color: white;
-      //   margin-bottom: 20px;
-      // }
-
 }
 }
