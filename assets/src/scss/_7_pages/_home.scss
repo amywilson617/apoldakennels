@@ -3,6 +3,7 @@
   background-color: $red;
   padding: 4%;
   text-align: center;
+  margin-top: 3%;
 }
 
 .phone-number{
@@ -102,9 +103,10 @@ a {
   clear: none;
 }
 
-.video {
-  margin: auto;
+iframe {
+    position: relative;
 }
+
 
 .footer{
   margin-top: 3%;
@@ -156,7 +158,8 @@ a {
    .video{
      grid-column: span 2;
      grid-area: "video";
-     grid-area: "video";
+      width: 50%;
+      margin: auto;
 
    }
 
@@ -177,6 +180,11 @@ a {
      }
    }
 
+   iframe {
+       position: relative;
+       width: 500px;
+   }
+
    .footer{
      margin-top: 2%;
      grid-column: span 2;
@@ -189,6 +197,9 @@ a {
 
   .phone-number{
     margin-right: 7%;
+  }
+  .video{
+    width: 30%;
   }
 
 }

@@ -8,6 +8,7 @@
 
   .shout{
     position: relative;
+    margin-right: 3%;
     h3{
       color: $darkgray;
     }
@@ -25,8 +26,9 @@
      font-family: $mont;
      padding: 3%;
      margin: auto;
-     width: 80%;
+     width:90%;
      margin-left: 22%;
+     margin-right: 4%;
      li{
        line-height: em(40);
        text-align: left;
@@ -309,13 +311,15 @@ small {
 
       .shout{
         margin-top: 6%;
+        margin-right: 30px;
         width: 90%;
         grid-area: "shout";
 
         img{
-          margin-left: -46px;
-          margin-bottom: -14px;
-          width: 9%
+          margin-left: -40px;
+          margin-top: 7px;
+          width: 9%;
+          padding-right: 20px;
         }
         h3{
           color: $gray;
@@ -325,6 +329,7 @@ small {
        ul{
          color: $darkred;
          line-height: em(30);
+          margin-right: 100px;
 
          a{
            color: $darkred;
@@ -365,9 +370,13 @@ small {
         width: 50%;
 
         .shout{
+            margin-right: 100px;
+
           img{
-            margin-left: -20px;
+            margin-left: -25px;
+            margin-top: 30px;
             width: 4%;
+            padding-right: 20px;
           }
         }
       }
