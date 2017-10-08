@@ -14,7 +14,6 @@
 .nav{
 	padding: 0%;
 	@include no-bullets;
-
 }
 
 .full-nav{
@@ -44,10 +43,13 @@
 	float: right;
 }
 
-
 // MEDIA QUERIES
 
 @include breakpoint(tablet){
+
+	.phone-number h2{
+		padding-right: 55px;
+	}
 
 	.logo{
 		padding-top: 0%;
@@ -58,20 +60,14 @@
 		margin-bottom: 0%;
 	}
 
-	.ham{
-		display: none;
-	}
-
 .full-nav {
 	font-family: $raleway;
 	clear: both;
-
 
 	ul {
 		padding-right: 1%;
 		padding-top: 3%;
 		padding-bottom: 0%;
-
 
 		> li {
 			@include no-bullets;
@@ -117,7 +113,6 @@
 	.main{
 		display: flex;
 	}
-
 
 	.full-nav{
 		font-size: em(12);

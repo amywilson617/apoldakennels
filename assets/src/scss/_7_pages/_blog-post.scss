@@ -1,13 +1,3 @@
-// .grid-blog-post {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-template-areas: "nav"
-//     "blog-full"
-//     "blog-search"
-//     "recent-posts"
-//     "footer";
-// }
-
 .blog-full{
   color: $gray;
   font-family: $mont;
@@ -76,11 +66,11 @@
 .recent-posts{
   grid-area: "recent-posts";
   grid-column: span 3;
-  width: 60%;
+  width: 70%;
   margin: auto;
   background-color: $gray;
   margin-bottom: 4%;
-  margin-top: 6%;
+  margin-top: 2%;
 }
 
 .recent-posts ul{
@@ -93,13 +83,39 @@
     }
   }
 
-.recent-posts .red-arrow{
-  width: 5%;
+.recent-posts a{
+  position: absolute;
+  img{
+    position: relative;
+    width: 20%;
+    margin-right: 60%;;
+    margin-top: 2%;
+  }
 }
 
 // MEDIA QUERIES
+
+@media (min-width: 390px){
+  .recent-posts a{
+    img{
+      width: 17%;
+      margin-right: 67px;
+      margin-top: -1px;
+    }
+  }
+}
+
+  @media (min-width: 471px){
+    .recent-posts a{
+      img{
+        width: 12%;
+        margin-right: 92px;
+        margin-top: -1px;
+      }
+    }
+}
 @include breakpoint(tablet){
-.recenth-posts img{
+.recent-posts img{
   width: 5%;
   }
 
@@ -125,16 +141,21 @@
     width: 40%;
 
   .red-arrow{
-    width: 6%;
+    width: 11%;
+    margin-left: -50px;
   }
   }
 }
 
-@include breakpoint(regular-screen){
-.recent-posts img{
-  width: 5%;
+@media (min-width: 1037px){
+  .recent-posts a{
+    img{
+      margin-top: 1px;
+    }
   }
+}
 
+@include breakpoint(regular-screen){
  .blog-full{
    width: 70%;
    margin: auto;
@@ -154,7 +175,8 @@
   .recent-posts {
     width: 30%;
     .red-arrow{
-      width: 6%;
+      width: 12%;
+      margin-top: -1px;
   }
 }
 

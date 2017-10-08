@@ -1,23 +1,10 @@
-
 .mica-looking{
   width: 60%;
   margin: auto;
   display: block;
   margin-top: 6%;
 }
-
-  .shout{
-    position: relative;
-    margin-right: 3%;
-    h3{
-      color: $darkgray;
-    }
-     img{
-       width: 5%;
-       position: absolute;
-       margin-left: -38px;
-     }
-
+.shout{
    ul{
      color: $darkred;
      line-height: em(30);
@@ -36,6 +23,12 @@
        color: $darkred;
      }
 
+     img{
+       margin-left: -40px;
+       margin-top: 7px;
+       width: 10%;
+       padding-right: 20px;
+     }
 
      a{
        color: white
@@ -47,19 +40,12 @@
 
      a{
        color: $darkred;
-
-
    }
        a:hover{
          color: $darkgray;
-
      }
    }
-}
-
-
-
-
+ }
 
 .hours table{
   border: none;
@@ -137,8 +123,7 @@ label {
   font-weight: 200;
 }
 
-textarea,
-input {
+textarea,input {
   border: none;
   outline: none;
   border-radius: 0;
@@ -156,7 +141,6 @@ input {
 
 textarea {
   text-align: left;
-  /* overflow:hidden; */
   resize: none;
   width: 90%;
   border-color: $darkgray;
@@ -206,8 +190,6 @@ input:required:invalid {
 }
 
 :-moz-placeholder {
-  /* Firefox 18- */
-
   text-align: center;
   color: $darkgray;
   font-style: italic;
@@ -215,8 +197,6 @@ input:required:invalid {
 }
 
 ::-moz-placeholder {
-  /* Firefox 19+ */
-
   text-align: center;
   color: $darkgray;
   font-style: italic;
@@ -288,6 +268,14 @@ small {
 
 // MEDIA QUERIES
 
+@media (min-width: 505px){
+  .shout{
+     img{
+       width: 6%;
+     }
+}
+}
+
 @include breakpoint(tablet){
   .grid-contact {
     display: grid;
@@ -299,11 +287,12 @@ small {
       "contact-form"
       "footer";
     }
+
     .nav{
         grid-column: span 3;
         grid-area: "nav";
-
     }
+
       .mica-looking{
         grid-column: span 2;
         grid-area: "mica-looking";
@@ -311,21 +300,23 @@ small {
 
       .shout{
         margin-top: 6%;
-        margin-right: 30px;
         width: 90%;
+        padding-right: 100px;
         grid-area: "shout";
 
         img{
           margin-left: -40px;
           margin-top: 7px;
-          width: 9%;
+          width: 10%;
           padding-right: 20px;
         }
+
         h3{
           color: $gray;
         }
         grid-column: span 1;
         background-color: white;
+
        ul{
          color: $darkred;
          line-height: em(30);
@@ -334,9 +325,9 @@ small {
          a{
            color: $darkred;
        }
+
            a:hover{
              color: $darkgray;
-
          }
        }
       }
@@ -369,15 +360,5 @@ small {
       .mica-looking{
         width: 50%;
 
-        .shout{
-            margin-right: 100px;
-
-          img{
-            margin-left: -25px;
-            margin-top: 30px;
-            width: 4%;
-            padding-right: 20px;
-          }
-        }
       }
     }

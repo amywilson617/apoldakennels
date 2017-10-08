@@ -40,13 +40,6 @@
 	border-radius: 50em;
 }
 
-
-
-/**
- * CLEARFIX
- * Should be placed on the container, wrapping item
- * https://rachelandrew.co.uk/archives/2017/01/24/the-end-of-the-clearfix-hack/
- */
 @mixin clearfix() {
 
     &:after {
@@ -63,8 +56,6 @@
         }
     }
 }
-
-
 
 @mixin columns($columns: 2) {
 	column-count: $columns;

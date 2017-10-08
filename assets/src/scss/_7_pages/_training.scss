@@ -2,11 +2,12 @@
   color: $gray;
   text-transform: none;
   font-size: em(16);
-  margin-bottom: 30px;
-
-.gray-info img{
-  margin-left: auto;
+  margin-bottom: 30px
 }
+
+// .gray-info img{
+//   margin-left: auto;
+// }
 
 .reservations{
   color: $darkred;
@@ -19,19 +20,14 @@
   margin: auto;
   border: solid $red 2px;
   position: static;
-  grid-area: "reservations";
 
-    a{
+    a {
       text-decoration: none;
     }
 
-    a:hover{
+    a:hover {
       font-weight: bold;
     }
-}
-
-.red-info{
-  color: $red;
 }
 
 .grid-training{
@@ -48,61 +44,89 @@
   .grid-training {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "nav"
+    grid-template-areas: "full-nav"
+    "reservations"
       "red-info"
       "white-info"
       "gray-info"
       "footer";
 
-      .nav{
-        grid-column: span 2;
-      }
+        .quote {
+          width: 20%;
+          padding: 1%;
 
-      .reservations{
-        margin-top: 2%;
-        font-size: em(17);
-      }
-
-      .red-info{
-        grid-column: span 1;
-        margin-top: 6%;
-        background-color: $red;
-      }
-
-      .white-info{
-        grid-column: span 1;
-        background-color: $gray;
-        margin-top: 6%;
-        p{
-          color: white;
+          img{
+            margin-right: 60px;
+            width: 15%;
+            margin-left: 10%;
+            margin-top: -2px;
+          }
         }
-      }
 
-      .white-info h3{
+    .full-nav{
+      grid-column: span 2;
+    }
+
+    .reservations{
+      grid-column: span 2;
+      margin-top: 2%;
+      font-size: em(17);
+    }
+
+    .red-info{
+      grid-column: span 1;
+      margin-top: 6%;
+    }
+
+    .white-info{
+      grid-column: span 1;
+      background-color: $gray;
+      margin-top: 6%;
+
+      h3{
         color: white;
       }
 
-      .gray-info{
-        grid-column: span 2;
-        margin: auto;
-        width: 100%;
+      p{
+        color: white;
       }
-
-    .rwd-table{
-      margin-top: 4%;
-      margin-bottom: 8%;
-      background-color: white;
-      width: 50%;
     }
 
-      .footer{
-        grid-column: span 2;
+    .gray-info{
+      grid-column: span 2;
+      h3{
+        margin-bottom: 2%;
       }
+    }
 
-      .quote {
-        width: 20%;
-        padding: 1%;
-        }
-      }
+    .rwd-table {
+      background:$darkgray;
+      color: #fff;
+      overflow: hidden;
+      font-family: $mont;
+      width: 40%;
+      line-height: em(34);
+      background-color: white;
+      margin-bottom: 20px;
+      padding: 1%;
+    }
+
+    .footer{
+      grid-column: span 2;
+    }
+  }
 }
+
+@include breakpoint(regular-screen){
+    .grid-training{
+        .quote{
+          width: 22%;
+          margin: auto;
+          padding: 1%;
+        .red-arrow{
+          width: 9%;
+          margin-left: 4%;
+        }
+    }
+  }
 }

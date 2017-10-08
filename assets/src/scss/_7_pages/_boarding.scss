@@ -1,5 +1,3 @@
-
-
 .reservations{
   color: $darkred;
   font-family: $raleway;
@@ -211,14 +209,3 @@ tr{
       }
 }
 }
-
-// @include breakpoint(regular-screen){
-//   .grid-boarding {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr 1fr;
-//     grid-template-areas:
-//       "nav nav nav nav"
-//       "red-info white-info red-bold gray-info"
-//       "footer footer footer footer";
-//     }
-// }
